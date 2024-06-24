@@ -1,3 +1,6 @@
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 
@@ -40,6 +43,17 @@ export default function HomePage() {
             code himself, Shea brings a blend of innovation, expertise, and
             passion to the table, continually setting new standards in the field
             of developing web applications.
+          </p>
+
+          <p>
+            Check out my{' '}
+            <Button
+              themeColor="primary"
+              href="https://github.com/sheariley"
+              target="_blank"
+            >
+              <FontAwesomeIcon icon={faGithub} /> GitHub profile
+            </Button>
           </p>
         </Card.Body>
       </Card>
