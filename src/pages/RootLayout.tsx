@@ -53,9 +53,10 @@ export default function RootLayout() {
       </div>
       <div className="drawer-side shadow-xl shadow-black">
         <label
-          htmlFor="my-drawer"
+          htmlFor="nav-drawer"
           aria-label="close sidebar"
           className="drawer-overlay lg:hidden"
+          onClick={handleDrawerClose}
         ></label>
         <div className="relative flex min-h-full w-48 flex-col border-r-2 border-neutral/30 bg-neutral/30 p-1 pt-8 text-base-content backdrop-blur-xl">
           <Button
