@@ -11,38 +11,38 @@ export default function HomePage() {
         <Card.Body>
           <Card.Title>Who I Am</Card.Title>
           <p>
-            Meet Shea Riley, a highly driven and accomplished developer and
-            architect whose passion is matched only by his relentless pursuit of
-            perfection. With a keen eye for detail and a commitment to
-            excellence, Shea has honed his skills to expertly balance the
-            intricate art of crafting seamless user experiences with the robust
-            engineering of scalable, maintainable web applications.
+            I am a highly driven and accomplished developer and architect whose
+            passion is matched only by his relentless pursuit of perfection.
+            With a keen eye for detail and a commitment to excellence, I have
+            honed my skills to expertly balance the intricate art of crafting
+            seamless user experiences with the robust engineering of scalable,
+            maintainable web applications.
           </p>
 
           <p>
-            His approach to web development is holistic, meticulously
-            considering every aspect from architecture to end-user experience.
-            Shea understands that a great user interface is only the surface of
-            a successful application. He delves deeper, ensuring that the
-            underlying architecture supports not only current requirements but
-            also future growth, facilitating maintainability and scalability.
+            My approach to web development is holistic, meticulously considering
+            every aspect from architecture to end-user experience. I understand
+            that a great user interface is only the surface of a successful
+            application. I delve deeper, ensuring that the underlying
+            architecture supports not only current requirements but also future
+            growth, facilitating maintainability and scalability.
           </p>
 
           <p>
-            Shea is acutely aware of the ever-present demands of the market. He
-            strives to deliver high-quality, performant solutions within tight
+            I am acutely aware of the ever-present demands of the market. I
+            strive to deliver high-quality, performant solutions within tight
             timelines, proving that time-to-market does not have to come at the
-            expense of quality. His strategic thinking and proactive
-            problem-solving abilities make him a valuable asset to any team,
+            expense of quality. My strategic thinking and proactive
+            problem-solving abilities make me a valuable asset to any team,
             always pushing the boundaries of what is possible in web
             development.
           </p>
 
           <p>
             Whether leading a team through complex projects or diving into the
-            code himself, Shea brings a blend of innovation, expertise, and
-            passion to the table, continually setting new standards in the field
-            of developing web applications.
+            code myself, I bring a blend of innovation, expertise, and passion
+            to the table, continually setting new standards in the field of
+            developing web applications.
           </p>
 
           <p>
