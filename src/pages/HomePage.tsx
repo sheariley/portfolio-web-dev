@@ -12,10 +12,10 @@ export default function HomePage() {
           <Card.Title>Who I Am</Card.Title>
           <p>
             I am a highly driven and accomplished developer and architect whose
-            passion is matched only by his relentless pursuit of perfection.
-            With a keen eye for detail and a commitment to excellence, I have
-            honed my skills to expertly balance the intricate art of crafting
-            seamless user experiences with the robust engineering of scalable,
+            passion is matched only by my relentless pursuit of perfection. With
+            a keen eye for detail and a commitment to excellence, I have honed
+            my skills to expertly balance the intricate art of crafting seamless
+            user experiences with the robust engineering of scalable,
             maintainable web applications.
           </p>
 
