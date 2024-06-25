@@ -19,6 +19,7 @@ export default function RootLayout() {
 
   function handleDrawerClose() {
     setDrawerOpen(false);
+    document.body.scrollIntoView();
   }
 
   function handleDrawerOpen() {
@@ -73,25 +74,25 @@ export default function RootLayout() {
           />
           <ul className="menu flex-1 space-y-3">
             <li>
-              <NavLink to="/">
+              <NavLink to="/" onClick={handleDrawerClose}>
                 <FontAwesomeIcon icon={faHome} />
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink to="/architecture">
+              <NavLink to="/architecture" onClick={handleDrawerClose}>
                 <FontAwesomeIcon icon={faLayerGroup} />
                 Architecture
               </NavLink>
             </li>
             <li>
-              <NavLink to="/experience">
+              <NavLink to="/experience" onClick={handleDrawerClose}>
                 <FontAwesomeIcon icon={faBusinessTime} />
                 Experience
               </NavLink>
             </li>
             <li>
-              <NavLink to="/certifications">
+              <NavLink to="/certifications" onClick={handleDrawerClose}>
                 <FontAwesomeIcon icon={faCertificate} />
                 Certifications
               </NavLink>
