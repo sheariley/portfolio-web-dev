@@ -1,14 +1,14 @@
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBusinessTime } from '@fortawesome/free-solid-svg-icons';
 
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 
 export default function HomePage() {
   return (
-    <section className="gap-8 space-y-12 lg:block lg:columns-2 max_lg:flex max_lg:flex-col max_lg:items-center">
-      <Card>
-        <Card.Body>
+    <section className="flex flex-col items-center gap-8 space-y-12">
+      <Card className="sticky top-10 min-h-[calc(100svh_-_80px)]">
+        <Card.Body className="grow-0">
           <Card.Title>Who I Am</Card.Title>
           <p>
             I am a highly driven and accomplished developer and architect whose
@@ -51,14 +51,16 @@ export default function HomePage() {
               themeColor="primary"
               href="https://github.com/sheariley"
               target="_blank"
+              icon={faGithub}
+              size="sm"
             >
-              <FontAwesomeIcon icon={faGithub} /> GitHub profile
+              GitHub profile
             </Button>
           </p>
         </Card.Body>
       </Card>
-      <Card>
-        <Card.Body>
+      <Card className="sticky top-11 min-h-[calc(100svh_-_80px)]">
+        <Card.Body className="grow-0">
           <Card.Title>Goals and Aspirations</Card.Title>
           <p>
             I am eager to work with others who are highly driven, open-minded,
@@ -87,8 +89,8 @@ export default function HomePage() {
           </p>
         </Card.Body>
       </Card>
-      <Card>
-        <Card.Body>
+      <Card className="sticky top-12 min-h-[calc(100svh_-_80px)]">
+        <Card.Body className="grow-0">
           <Card.Title>How I Innovate</Card.Title>
           <p>
             An experienced web developer passionate about researching new
@@ -116,8 +118,8 @@ export default function HomePage() {
           </p>
         </Card.Body>
       </Card>
-      <Card>
-        <Card.Body>
+      <Card className="sticky top-14 min-h-[calc(100svh_-_80px)]">
+        <Card.Body className="grow-0">
           <Card.Title>How It All Started</Card.Title>
           <p>
             It all started when I discovered that my high school offered
@@ -154,16 +156,15 @@ export default function HomePage() {
           </p>
 
           <p>
-            The rest is history and you can read more about it{' '}
+            The rest is history and you can read more about it in{' '}
             <Button
               to="/experience"
-              displayType="link"
-              themeColor="info"
-              className="px-0"
+              themeColor="primary"
+              icon={faBusinessTime}
+              size="sm"
             >
-              here
+              Experience
             </Button>
-            .
           </p>
         </Card.Body>
       </Card>
