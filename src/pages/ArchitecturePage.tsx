@@ -1,4 +1,5 @@
 import Card from '@/components/ui/Card';
+import PageHeader from '@/components/ui/PageHeader';
 import {
   faAngular,
   faBootstrap,
@@ -20,7 +21,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export default function AchitecturePage() {
   return (
     <>
-      <h1 className="text-center">Architecture &amp; Technology</h1>
+      <PageHeader>Architecture &amp; Technology</PageHeader>
       <br />
       <section className="gap-8 space-y-12 lg:block lg:columns-2 max_lg:flex max_lg:w-full max_lg:flex-col max_lg:items-stretch">
         <Card>

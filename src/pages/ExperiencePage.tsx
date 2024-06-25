@@ -1,11 +1,14 @@
 import Card from '@/components/ui/Card';
+import PageHeader from '@/components/ui/PageHeader';
 
 export default function ExperiencePage() {
   return (
     <>
-      <h1 className="text-center">
-        Work Experience (in reverse chronological order)
-      </h1>
+      <PageHeader>
+        Work Experience
+        <br />
+        (in reverse chronological order)
+      </PageHeader>
       <br />
       <section className="flex flex-col items-center gap-8 space-y-12">
         <Card>

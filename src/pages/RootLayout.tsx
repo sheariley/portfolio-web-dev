@@ -34,18 +34,19 @@ export default function RootLayout() {
         checked={drawerOpen}
         onChange={() => {}}
       />
-      <div className="drawer-content flex flex-col items-center p-2 pl-14 pt-4 lg:p-8">
+      <div className="drawer-content flex flex-col items-center p-2 pt-4 lg:p-8">
         {!drawerOpen && (
-          <Button
-            aria-label="open sidebar"
-            className="fixed left-2 top-2 lg:hidden"
-            widthType="square"
-            size="sm"
-            themeColor="ghost"
-            icon={faBars}
-            iconSize="2x"
-            onClick={handleDrawerOpen}
-          />
+          <div className="fixed left-0 top-0 z-50 flex w-full justify-start border-b-2 border-neutral/30 bg-neutral/30 p-1 shadow-2xl backdrop-blur-xl lg:hidden">
+            <Button
+              aria-label="open sidebar"
+              widthType="square"
+              size="sm"
+              themeColor="ghost"
+              icon={faBars}
+              iconSize="2x"
+              onClick={handleDrawerOpen}
+            />
+          </div>
         )}
         <Header />
         <main className="w-full">

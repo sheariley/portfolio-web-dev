@@ -2,7 +2,7 @@ import { twJoin } from 'tailwind-merge';
 
 export default function Header() {
   return (
-    <header className="mb-20 mt-5 flex w-[450px] select-none flex-col items-center scale-[.65] md:scale-100">
+    <header className="mb-10 mt-5 flex w-[450px] select-none flex-col items-center scale-[.65] md:scale-100 max_lg:mt-8 max_md:mb-1">
       <div
         className={twJoin(
           'whitespace-nowrap text-8xl font-bold antialiased -skew-x-12',
