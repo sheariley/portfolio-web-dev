@@ -7,7 +7,7 @@ import {
   faSquareCaretLeft
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ChangeEvent, useState } from 'react';
+import { useState } from 'react';
 import { Outlet } from 'react-router';
 import { NavLink } from 'react-router-dom';
 
@@ -25,12 +25,6 @@ export default function RootLayout() {
     setDrawerOpen(true);
   }
 
-  function handleDrawerToggleChange(event: ChangeEvent<HTMLInputElement>) {
-    if (event.target && typeof event.target.checked !== 'undefined') {
-      setDrawerOpen(event.target.checked);
-    }
-  }
-
   return (
     <div className="drawer lg:drawer-open">
       <input
@@ -38,9 +32,9 @@ export default function RootLayout() {
         type="checkbox"
         className="drawer-toggle"
         checked={drawerOpen}
-        onChange={handleDrawerToggleChange}
+        onChange={() => {}}
       />
-      <div className="drawer-content flex flex-col items-center p-14 pt-4 lg:p-8">
+      <div className="drawer-content flex flex-col items-center p-2 pl-14 pt-4 lg:p-8">
         {!drawerOpen && (
           <Button
             aria-label="open sidebar"
@@ -54,7 +48,7 @@ export default function RootLayout() {
           />
         )}
         <Header />
-        <main>
+        <main className="w-full">
           <Outlet />
         </main>
       </div>

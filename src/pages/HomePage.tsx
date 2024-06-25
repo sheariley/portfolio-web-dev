@@ -6,7 +6,7 @@ import Card from '@/components/ui/Card';
 
 export default function HomePage() {
   return (
-    <section className="flex flex-col items-center gap-8 space-y-12">
+    <section className="flex flex-col items-center space-y-12 max_lg:pb-5">
       <Card className="sticky top-10 min-h-[calc(100svh_-_80px)]">
         <Card.Body className="grow-0">
           <Card.Title>Who I Am</Card.Title>

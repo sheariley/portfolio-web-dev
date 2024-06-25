@@ -22,7 +22,7 @@ export default function AchitecturePage() {
     <>
       <h1 className="text-center">Architecture &amp; Technology</h1>
       <br />
-      <section className="gap-8 space-y-12 lg:block lg:columns-2 max_lg:flex max_lg:flex-col max_lg:items-center">
+      <section className="gap-8 space-y-12 lg:block lg:columns-2 max_lg:flex max_lg:w-full max_lg:flex-col max_lg:items-stretch">
         <Card>
           <Card.Body>
             <Card.Title>Architectural Patterns &amp; Practices</Card.Title>
