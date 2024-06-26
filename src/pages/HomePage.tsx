@@ -1,4 +1,4 @@
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faBusinessTime } from '@fortawesome/free-solid-svg-icons';
 
 import Button from '@/components/ui/Button';
@@ -47,29 +47,44 @@ export default function HomePage() {
 
           <p className="max_lg:my-1">
             Keep scrolling for more about me, or check out one of the following:
-            <br />
-            <br />
-            <Button
-              themeColor="primary"
-              to="/experience"
-              icon={faBusinessTime}
-              size="sm"
-              className="min-w-[150px] justify-start"
-            >
-              Experience
-            </Button>
-            &nbsp;&nbsp;
-            <Button
-              themeColor="primary"
-              href="https://github.com/sheariley"
-              target="_blank"
-              icon={faGithub}
-              size="sm"
-              className="min-w-[150px] justify-start"
-            >
-              GitHub profile
-            </Button>
           </p>
+          <ul className="my-0 list-none pl-0 *:my-4 *:flex *:w-[160px] *:pl-0 md:flex md:flex-row md:space-x-4">
+            <li>
+              <Button
+                themeColor="primary"
+                to="/experience"
+                icon={faBusinessTime}
+                size="sm"
+                className="w-full justify-start"
+              >
+                Experience
+              </Button>
+            </li>
+            <li>
+              <Button
+                themeColor="primary"
+                href="https://github.com/sheariley"
+                target="_blank"
+                icon={faGithub}
+                size="sm"
+                className="w-full justify-start"
+              >
+                GitHub profile
+              </Button>
+            </li>
+            <li>
+              <Button
+                themeColor="primary"
+                href="https://www.linkedin.com/in/shea-riley-8bb19336/"
+                target="_blank"
+                icon={faLinkedin}
+                size="sm"
+                className="w-full justify-start"
+              >
+                Linked-In profile
+              </Button>
+            </li>
+          </ul>
         </Card.Body>
       </Card>
       <Card className="md:sticky md:top-11 md:min-h-[calc(100svh_-_80px)] max_lg:top-14">
