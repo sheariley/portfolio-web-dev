@@ -46,7 +46,16 @@ export default function HomePage() {
           </p>
 
           <p className="max_lg:my-1">
-            Check out my{' '}
+            Keep scrolling for more about me, or check out my{' '}
+            <Button
+              themeColor="primary"
+              to="/experience"
+              icon={faBusinessTime}
+              size="sm"
+            >
+              Experience
+            </Button>{' '}
+            or my{'  '}
             <Button
               themeColor="primary"
               href="https://github.com/sheariley"

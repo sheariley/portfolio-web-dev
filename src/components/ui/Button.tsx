@@ -100,7 +100,9 @@ export const Button = forwardRef<
         {...intrinsicProps}
       >
         {props.icon && (
-          <FontAwesomeIcon icon={props.icon} size={props.iconSize} />
+          <span className="min-w-[20px]">
+            <FontAwesomeIcon icon={props.icon} size={props.iconSize} />
+          </span>
         )}
         {props.children}
       </a>
@@ -116,7 +118,9 @@ export const Button = forwardRef<
         {...intrinsicProps}
       >
         {props.icon && (
-          <FontAwesomeIcon icon={props.icon} size={props.iconSize} />
+          <span className="min-w-[20px]">
+            <FontAwesomeIcon icon={props.icon} size={props.iconSize} />
+          </span>
         )}
         {props.children}
       </Link>
@@ -132,7 +136,9 @@ export const Button = forwardRef<
       {...intrinsicProps}
     >
       {props.icon && (
-        <FontAwesomeIcon icon={props.icon} size={props.iconSize} />
+        <span className="min-w-[20px]">
+          <FontAwesomeIcon icon={props.icon} size={props.iconSize} />
+        </span>
       )}
       {props.children}
     </button>

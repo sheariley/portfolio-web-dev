@@ -6,13 +6,12 @@ import {
   faLayerGroup,
   faSquareCaretLeft
 } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import { Outlet } from 'react-router';
-import { NavLink } from 'react-router-dom';
 
 import Button from '@/components/ui/Button';
 import Header from '@/components/ui/Header';
+import NavMenu from '@/components/ui/NavMenu';
 
 export default function RootLayout() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -72,32 +71,31 @@ export default function RootLayout() {
             iconSize="2x"
             onClick={handleDrawerClose}
           />
-          <ul className="menu flex-1 space-y-3">
-            <li>
-              <NavLink to="/" onClick={handleDrawerClose}>
-                <FontAwesomeIcon icon={faHome} />
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/architecture" onClick={handleDrawerClose}>
-                <FontAwesomeIcon icon={faLayerGroup} />
-                Architecture
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/experience" onClick={handleDrawerClose}>
-                <FontAwesomeIcon icon={faBusinessTime} />
-                Experience
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/certifications" onClick={handleDrawerClose}>
-                <FontAwesomeIcon icon={faCertificate} />
-                Certifications
-              </NavLink>
-            </li>
-          </ul>
+          <NavMenu
+            onItemClick={handleDrawerClose}
+            menuItems={[
+              {
+                label: 'Home',
+                path: '/',
+                icon: faHome
+              },
+              {
+                label: 'Architecture',
+                path: '/architecture',
+                icon: faLayerGroup
+              },
+              {
+                label: 'Experience',
+                path: '/experience',
+                icon: faBusinessTime
+              },
+              {
+                label: 'Certifications',
+                path: '/certifications',
+                icon: faCertificate
+              }
+            ]}
+          />
         </div>
       </div>
     </div>
