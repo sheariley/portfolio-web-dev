@@ -172,7 +172,7 @@ export default function HomePage() {
           <p className="max_lg:my-1">
             When I was finally able to drive and get my first job, I was hired
             by a small, local dial-up internet provider as a technical support
-            representative. It wasn&apos;t position that involved programming,
+            representative. It wasn&apos;t a position that involved programming,
             but it involved computer technology. During that time, I continued
             to learn more about computer systems and hone my programming skills.
             Eventually, that lead to a job at a local company that designed and
