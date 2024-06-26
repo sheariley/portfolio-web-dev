@@ -54,19 +54,18 @@ export default function HomePage() {
               to="/experience"
               icon={faBusinessTime}
               size="sm"
-              className="min-w-[160px] justify-start"
+              className="min-w-[150px] justify-start"
             >
               Experience
             </Button>
-            <br />
-            <br />
+            &nbsp;&nbsp;
             <Button
               themeColor="primary"
               href="https://github.com/sheariley"
               target="_blank"
               icon={faGithub}
               size="sm"
-              className="min-w-[160px] justify-start"
+              className="min-w-[150px] justify-start"
             >
               GitHub profile
             </Button>
