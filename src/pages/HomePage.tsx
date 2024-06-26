@@ -121,28 +121,27 @@ export default function HomePage() {
         <Card.Body className="grow-0">
           <Card.Title>How I Innovate</Card.Title>
           <p className="max_lg:my-1">
-            An experienced web developer passionate about researching new
-            technologies and paradigms brings immense value to a business. Their
+            As an experienced web developer passionate about researching new
+            technologies and paradigms I bring immense value to a business. My
             continuous learning keeps the company at the technological
             forefront, integrating the latest advancements for a competitive
             edge.
           </p>
 
           <p className="max_lg:my-1">
-            By exploring cutting-edge tools and emerging trends, this developer
-            identifies and implements innovative solutions tailored to the
-            business&apos;s unique needs. Their creative problem-solving
-            transforms novel ideas into functional, efficient, and visually
-            appealing web experiences, optimizing performance and enhancing user
-            engagement.
+            By exploring cutting-edge tools and emerging trends, I identify and
+            implement innovative solutions tailored to the business&apos;s
+            unique needs. My creative problem-solving transforms novel ideas
+            into functional, efficient, and visually appealing web experiences,
+            optimizing performance and enhancing user engagement.
           </p>
 
           <p className="max_lg:my-1">
             This forward-thinking approach results in superior products that
             exceed market expectations, giving the business a distinct
-            competitive advantage. Their dedication to innovation ensures
-            impactful digital solutions that drive growth, helping the company
-            stand out and achieve sustained success.
+            competitive advantage. My dedication to innovation ensures impactful
+            digital solutions that drive growth, helping the company stand out
+            and achieve sustained success.
           </p>
         </Card.Body>
       </Card>
