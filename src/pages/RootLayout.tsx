@@ -2,6 +2,7 @@ import {
   faBars,
   faBusinessTime,
   faCertificate,
+  faCode,
   faFileText,
   faHome,
   faLayerGroup,
@@ -103,8 +104,15 @@ export default function RootLayout() {
               },
               {
                 label: 'Resume',
-                downloadUrl: '/resume.pdf',
+                href: '/resume.pdf',
+                download: true,
                 icon: faFileText
+              },
+              {
+                label: 'Site Source',
+                href: 'https://github.com/sheariley/portfolio-web-dev',
+                target: '_blank',
+                icon: faCode
               }
             ]}
           />

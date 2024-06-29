@@ -13,19 +13,21 @@ type NavMenuRouteItem = NavMenuItemBase & {
   path: string;
 };
 
-type NavMenuDownloadItem = NavMenuItemBase & {
-  downloadUrl: string;
+type NavMenuLinkItem = NavMenuItemBase & {
+  href: string;
+  target?: string;
+  download?: boolean;
 };
 
-type NavMenuItem = NavMenuRouteItem | NavMenuDownloadItem;
+type NavMenuItem = NavMenuRouteItem | NavMenuLinkItem;
 
 type NavMenuProps = {
   menuItems: NavMenuItem[];
   onItemClick?(event: MouseEvent<HTMLAnchorElement>): void;
 };
 
-function isNavMenuDownloadItem(item: NavMenuItem): item is NavMenuDownloadItem {
-  return 'downloadUrl' in item;
+function isNavMenuLinkItem(item: NavMenuItem): item is NavMenuLinkItem {
+  return 'href' in item;
 }
 
 function NavMenuItemIcon({ icon }: { icon: IconDefinition }) {
@@ -48,12 +50,13 @@ export default function NavMenu({ menuItems, onItemClick }: NavMenuProps) {
   return (
     <ul className="menu flex-1 space-y-3">
       {menuItems.map((item) => {
-        if (isNavMenuDownloadItem(item)) {
+        if (isNavMenuLinkItem(item)) {
           return (
-            <li key={item.downloadUrl}>
+            <li key={item.href}>
               <a
-                href={item.downloadUrl}
-                download
+                href={item.href}
+                download={item.download}
+                target={item.target}
                 onClick={handleItemClick.bind(null, item)}
               >
                 <NavMenuItemIcon icon={item.icon} />

@@ -1,5 +1,5 @@
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faFileText } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faFileText } from '@fortawesome/free-solid-svg-icons';
 
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
@@ -17,7 +17,7 @@ export default function LinksPage() {
               Links &amp; Downloads
             </Card.Title>
             <div className="mb-4 flex flex-col items-center">
-              <ul className="my-0 list-none pl-0 *:flex *:w-[160px] *:pl-0 md:flex md:flex-row md:space-x-4 md:*:my-4 max_md:space-y-6">
+              <ul className="my-0 list-none pl-0 *:flex *:w-[180px] *:pl-0 md:flex md:flex-row md:space-x-4 md:*:my-4 max_md:space-y-6">
                 <li>
                   <Button
                     themeColor="primary"
@@ -28,6 +28,18 @@ export default function LinksPage() {
                     className="w-full justify-start"
                   >
                     Resume
+                  </Button>
+                </li>
+                <li>
+                  <Button
+                    themeColor="primary"
+                    href="https://www.linkedin.com/in/shea-riley-8bb19336/"
+                    target="_blank"
+                    icon={faLinkedin}
+                    size="sm"
+                    className="w-full justify-start"
+                  >
+                    Linked-In profile
                   </Button>
                 </li>
                 <li>
@@ -45,13 +57,13 @@ export default function LinksPage() {
                 <li>
                   <Button
                     themeColor="primary"
-                    href="https://www.linkedin.com/in/shea-riley-8bb19336/"
+                    href="https://github.com/sheariley/portfolio-web-dev"
                     target="_blank"
-                    icon={faLinkedin}
+                    icon={faCode}
                     size="sm"
                     className="w-full justify-start"
                   >
-                    Linked-In profile
+                    Site Source Code
                   </Button>
                 </li>
               </ul>
