@@ -1,10 +1,11 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
-import HomePage from '@/pages/HomePage';
 import ArchitecturePage from '@/pages/ArchitecturePage';
 import CertificationsPage from '@/pages/CertificationsPage';
 import ExperiencePage from '@/pages/ExperiencePage';
+import HomePage from '@/pages/HomePage';
 import RootLayout from '@/pages/RootLayout';
+import LinksPage from './pages/LinksPage';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: 'certifications',
         element: <CertificationsPage />
+      },
+      {
+        path: 'links',
+        element: <LinksPage />
       }
     ]
   }

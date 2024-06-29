@@ -2,8 +2,10 @@ import {
   faBars,
   faBusinessTime,
   faCertificate,
+  faFileText,
   faHome,
   faLayerGroup,
+  faLink,
   faSquareCaretLeft
 } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
@@ -93,6 +95,16 @@ export default function RootLayout() {
                 label: 'Certifications',
                 path: '/certifications',
                 icon: faCertificate
+              },
+              {
+                label: 'Links',
+                path: '/links',
+                icon: faLink
+              },
+              {
+                label: 'Resume',
+                downloadUrl: '/resume.pdf',
+                icon: faFileText
               }
             ]}
           />
