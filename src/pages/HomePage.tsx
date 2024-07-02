@@ -7,7 +7,7 @@ import Card from '@/components/ui/Card';
 export default function HomePage() {
   return (
     <section className="flex flex-col items-center space-y-12 max_lg:pb-5">
-      <Card className="md:sticky md:top-10 md:min-h-[calc(100svh_-_80px)] max_lg:top-12">
+      <Card className="md:sticky md:top-10 md:min-h-[calc(100svh_-_80px)] max_lg:top-12 max_md:-top-10">
         <Card.Body className="grow-0">
           <Card.Title>Who I Am</Card.Title>
           <p className="max_lg:my-1">
