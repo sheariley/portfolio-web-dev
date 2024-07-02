@@ -37,7 +37,7 @@ export default function RootLayout() {
         checked={drawerOpen}
         onChange={() => {}}
       />
-      <div className="drawer-content flex flex-col items-center p-2 pt-4 lg:p-8">
+      <div className="drawer-content flex flex-col items-center p-2 pt-4 md:px-6 lg:p-8">
         {!drawerOpen && (
           <div className="fixed left-0 top-0 z-50 flex w-full justify-start border-b-2 border-neutral/30 bg-neutral/30 p-1 shadow-2xl backdrop-blur-xl lg:hidden">
             <Button

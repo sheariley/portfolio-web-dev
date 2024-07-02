@@ -6,7 +6,7 @@ export default function Header({ className }: { className?: string }) {
   return (
     <header
       className={twJoin(
-        'mb-10 flex w-[450px] select-none flex-col items-center scale-[.65] md:scale-100 max_md:mb-1',
+        'mb-10 flex w-[450px] select-none flex-col items-center scale-[.65] md:mt-16 md:scale-100 lg:mt-0 max_md:mb-1',
         className
       )}
     >
