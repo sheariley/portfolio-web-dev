@@ -1,5 +1,5 @@
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faBusinessTime } from '@fortawesome/free-solid-svg-icons';
+import { faBusinessTime, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
@@ -85,6 +85,17 @@ export default function HomePage() {
               </Button>
             </li>
           </ul>
+          <div className="mt-8 text-center">
+            <div>You can contact me at</div>
+            <Button
+              themeColor="secondary"
+              href="mailto:sheariley@live.com"
+              icon={faEnvelope}
+              className="w-48"
+            >
+              sheariley@live.com
+            </Button>
+          </div>
         </Card.Body>
       </Card>
       <Card className="md:sticky md:top-14 md:min-h-[calc(100svh_-_100px)]">
