@@ -11,27 +11,6 @@ import NotFoundPage from './pages/NotFoundPage';
 
 const router = createBrowserRouter([
   {
-    path: '/linked-in',
-    element: <RedirectPage />,
-    handle: {
-      to: 'https://www.linkedin.com/in/shea-riley-8bb19336/'
-    }
-  },
-  {
-    path: '/github',
-    element: <RedirectPage />,
-    handle: {
-      to: 'https://github.com/sheariley'
-    }
-  },
-  {
-    path: '/source',
-    element: <RedirectPage />,
-    handle: {
-      to: 'https://github.com/sheariley/portfolio-web-dev'
-    }
-  },
-  {
     path: '/',
     element: <RootLayout />,
     errorElement: <NotFoundPage />,
@@ -57,6 +36,27 @@ const router = createBrowserRouter([
         element: <LinksPage />
       }
     ]
+  },
+  {
+    path: '/linked-in',
+    element: <RedirectPage />,
+    handle: {
+      to: 'https://www.linkedin.com/in/shea-riley-8bb19336/'
+    }
+  },
+  {
+    path: '/github',
+    element: <RedirectPage />,
+    handle: {
+      to: 'https://github.com/sheariley'
+    }
+  },
+  {
+    path: '/source',
+    element: <RedirectPage />,
+    handle: {
+      to: 'https://github.com/sheariley/portfolio-web-dev'
+    }
   }
 ]);
 
