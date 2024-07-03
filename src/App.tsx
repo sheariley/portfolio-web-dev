@@ -6,11 +6,14 @@ import ExperiencePage from '@/pages/ExperiencePage';
 import HomePage from '@/pages/HomePage';
 import RootLayout from '@/pages/RootLayout';
 import LinksPage from './pages/LinksPage';
+import RedirectPage from './pages/RedirectPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <RootLayout />,
+    errorElement: <NotFoundPage />,
     children: [
       {
         index: true,
@@ -33,6 +36,27 @@ const router = createBrowserRouter([
         element: <LinksPage />
       }
     ]
+  },
+  {
+    path: '/linked-in',
+    element: <RedirectPage />,
+    handle: {
+      to: 'https://www.linkedin.com/in/shea-riley-8bb19336/'
+    }
+  },
+  {
+    path: '/github',
+    element: <RedirectPage />,
+    handle: {
+      to: 'https://github.com/sheariley'
+    }
+  },
+  {
+    path: '/source',
+    element: <RedirectPage />,
+    handle: {
+      to: 'https://github.com/sheariley/portfolio-web-dev'
+    }
   }
 ]);
 
