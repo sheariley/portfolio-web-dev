@@ -6,8 +6,9 @@ import ExperiencePage from '@/pages/ExperiencePage';
 import HomePage from '@/pages/HomePage';
 import RootLayout from '@/pages/RootLayout';
 import LinksPage from './pages/LinksPage';
-import RedirectPage from './pages/RedirectPage';
 import NotFoundPage from './pages/NotFoundPage';
+import RedirectPage from './pages/RedirectPage';
+import ExternalLinkUrls from './utils/external-link-urls';
 
 const router = createBrowserRouter([
   {
@@ -41,21 +42,21 @@ const router = createBrowserRouter([
     path: '/linked-in',
     element: <RedirectPage />,
     handle: {
-      to: 'https://www.linkedin.com/in/shea-riley-8bb19336/'
+      to: ExternalLinkUrls.LinkedIn
     }
   },
   {
     path: '/github',
     element: <RedirectPage />,
     handle: {
-      to: 'https://github.com/sheariley'
+      to: ExternalLinkUrls.GitHub
     }
   },
   {
     path: '/source',
     element: <RedirectPage />,
     handle: {
-      to: 'https://github.com/sheariley/portfolio-web-dev'
+      to: ExternalLinkUrls.Source
     }
   }
 ]);

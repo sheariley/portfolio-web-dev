@@ -15,6 +15,7 @@ import { Outlet } from 'react-router';
 import Button from '@/components/ui/Button';
 import Header from '@/components/ui/Header';
 import NavMenu from '@/components/ui/NavMenu';
+import ExternalLinkUrls from '@/utils/external-link-urls';
 
 export default function RootLayout() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -110,7 +111,7 @@ export default function RootLayout() {
               },
               {
                 label: 'Site Source',
-                href: 'https://github.com/sheariley/portfolio-web-dev',
+                href: ExternalLinkUrls.Source,
                 target: '_blank',
                 icon: faCode
               }
