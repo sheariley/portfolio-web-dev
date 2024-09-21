@@ -3,6 +3,7 @@ import { MouseEvent, useRef, useState } from 'react';
 import reactTypeScriptCert from '@/assets/cert-images/udemy-react-and-typescript-the-practical-guide.jpg';
 import reactNativeCert from '@/assets/cert-images/udemy-react-native-the-practical-guide-2024.jpg';
 import reactCert from '@/assets/cert-images/udemy-react-the-complete-guide-2024.jpg';
+import figmaEssentialsCert from '@/assets/cert-images/udemy-figma-ui-ux-design-essentials-2024.jpg';
 
 import Card from '@/components/ui/Card';
 import Modal, { ModalRef } from '@/components/ui/Modal';
@@ -65,6 +66,16 @@ export default function CertificationsPage() {
               className="m-0 cursor-pointer"
               src={reactNativeCert}
               alt="Udemy Certificate: React Native - The Practical Guide [2024]"
+              onClick={handleCertClick}
+            />
+          </Card.Body>
+        </Card>
+        <Card>
+          <Card.Body>
+            <img
+              className="m-0 cursor-pointer"
+              src={figmaEssentialsCert}
+              alt="Udemy Certificate: Figma UI UX Design Essentials"
               onClick={handleCertClick}
             />
           </Card.Body>
