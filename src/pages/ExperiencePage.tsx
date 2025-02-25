@@ -11,7 +11,7 @@ export default function ExperiencePage() {
       </PageHeader>
       <br />
       <section className="flex flex-col items-center gap-8 space-y-12">
-        <Card>
+        <Card className="w-full">
           <Card.Body>
             <Card.Title className="mb-0 flex justify-center">
               Atlas Technology Group
@@ -236,7 +236,7 @@ export default function ExperiencePage() {
           </Card.Body>
         </Card>
 
-        <Card>
+        <Card className="w-full">
           <Card.Body>
             <Card.Title className="mb-0 flex justify-center">
               The Learning Institute
@@ -400,7 +400,7 @@ export default function ExperiencePage() {
           </Card.Body>
         </Card>
 
-        <Card>
+        <Card className="w-full">
           <Card.Body>
             <Card.Title className="mb-0 flex justify-center">
               Cities In Touch

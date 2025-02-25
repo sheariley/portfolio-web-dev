@@ -7,7 +7,7 @@ import Card from '@/components/ui/Card';
 export default function HomePage() {
   return (
     <section className="flex flex-col items-center space-y-6 pb-5 md:space-y-12 lg:pb-0">
-      <Card className="md:sticky md:top-12 md:min-h-[calc(100svh_-_100px)] lg:min-h-[calc(100svh_-_80px)]">
+      <Card className="w-full md:sticky md:top-12 md:min-h-[calc(100svh_-_100px)] lg:min-h-[calc(100svh_-_80px)]">
         <Card.Body className="grow-0">
           <Card.Title>Who I Am</Card.Title>
           <p className="max_lg:my-1">
@@ -98,7 +98,7 @@ export default function HomePage() {
           </div>
         </Card.Body>
       </Card>
-      <Card className="md:sticky md:top-14 md:min-h-[calc(100svh_-_100px)]">
+      <Card className="w-full md:sticky md:top-14 md:min-h-[calc(100svh_-_100px)]">
         <Card.Body className="grow-0">
           <Card.Title>Goals and Aspirations</Card.Title>
           <p className="max_lg:my-1">
@@ -128,7 +128,7 @@ export default function HomePage() {
           </p>
         </Card.Body>
       </Card>
-      <Card className="md:sticky md:top-16 md:min-h-[calc(100svh_-_100px)]">
+      <Card className="w-full md:sticky md:top-16 md:min-h-[calc(100svh_-_100px)]">
         <Card.Body className="grow-0">
           <Card.Title>How I Innovate</Card.Title>
           <p className="max_lg:my-1">
@@ -156,7 +156,7 @@ export default function HomePage() {
           </p>
         </Card.Body>
       </Card>
-      <Card className="md:sticky md:top-20 md:min-h-[calc(100svh_-_100px)] lg:min-h-[calc(100svh_-_105px)]">
+      <Card className="w-full md:sticky md:top-20 md:min-h-[calc(100svh_-_100px)] lg:min-h-[calc(100svh_-_105px)]">
         <Card.Body className="grow-0">
           <Card.Title>How It All Started</Card.Title>
           <p className="max_lg:my-1">
