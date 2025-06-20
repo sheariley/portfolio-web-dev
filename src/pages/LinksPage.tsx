@@ -8,13 +8,11 @@ import {
 import farmHubWebsitePreviewImg from '@/assets/website-screenshots/farm-hub-home-page-screenshot.jpg';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
-import PageHeader from '@/components/ui/PageHeader';
 import ExternalLinkUrls from '@/utils/external-link-urls';
 
 export default function LinksPage() {
   return (
     <>
-      <PageHeader />
       <section className="flex flex-col items-stretch gap-8 space-y-12">
         <Card>
           <Card.Body>
