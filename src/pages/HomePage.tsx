@@ -1,5 +1,9 @@
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faBusinessTime, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import {
+  faBusinessTime,
+  faEnvelope,
+  faExternalLink
+} from '@fortawesome/free-solid-svg-icons';
 
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
@@ -58,6 +62,17 @@ export default function HomePage() {
                 className="w-full justify-start"
               >
                 Experience
+              </Button>
+            </li>
+            <li>
+              <Button
+                themeColor="primary"
+                to="/links"
+                icon={faExternalLink}
+                size="sm"
+                className="w-full justify-start"
+              >
+                Links
               </Button>
             </li>
             <li>
