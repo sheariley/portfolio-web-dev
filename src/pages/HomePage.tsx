@@ -50,7 +50,8 @@ export default function HomePage() {
           </p>
 
           <p className="max_lg:my-1">
-            Keep scrolling for more about me, or check out one of the following:
+            Keep scrolling for more about me and my story, explore the website
+            via the navigation menu, or check out one of the following links:
           </p>
           <ul className="my-0 list-none pl-0 *:my-4 *:flex *:w-[160px] *:pl-0 md:flex md:flex-row md:space-x-4">
             <li>
