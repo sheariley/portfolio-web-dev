@@ -7,6 +7,7 @@ import {
 
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
+import ExternalLinkUrls from '@/utils/external-link-urls';
 
 export default function HomePage() {
   return (
@@ -79,7 +80,7 @@ export default function HomePage() {
             <li>
               <Button
                 themeColor="primary"
-                href="https://github.com/sheariley"
+                href={ExternalLinkUrls.GitHub}
                 target="_blank"
                 icon={faGithub}
                 size="sm"
@@ -91,7 +92,7 @@ export default function HomePage() {
             <li>
               <Button
                 themeColor="primary"
-                href="https://www.linkedin.com/in/shea-riley-8bb19336/"
+                href={ExternalLinkUrls.LinkedIn}
                 target="_blank"
                 icon={faLinkedin}
                 size="sm"
