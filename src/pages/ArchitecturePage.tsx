@@ -14,7 +14,8 @@ import {
   faNodeJs,
   faReact,
   faSass,
-  faSlack
+  faSlack,
+  faVuejs
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -103,6 +104,12 @@ export default function AchitecturePage() {
                 <li>React Native</li>
                 <li>Next.js</li>
                 <li>Redux</li>
+                <li>
+                  <FontAwesomeIcon icon={faVuejs} />
+                  &nbsp;Vue
+                </li>
+                <li>Nuxt</li>
+                <li>Pinia</li>
                 <li>OData (Breeze)</li>
                 <li>Highcharts</li>
                 <li>JSONata</li>
@@ -190,6 +197,8 @@ export default function AchitecturePage() {
                 <li>Microsoft SQL Server Management Studio</li>
                 <li>DB Visualizer</li>
                 <li>PostgreSQL</li>
+                <li>Supabase</li>
+                <li>Vercel</li>
               </ul>
             </div>
           </Card.Body>
