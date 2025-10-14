@@ -85,7 +85,7 @@ export default function AchitecturePage() {
 
         <Card>
           <Card.Body>
-            <Card.Title>Front-end Frameworks</Card.Title>
+            <Card.Title>Front-end Frameworks and Tools</Card.Title>
             <div className="prose max-w-none">
               <h2>Modern</h2>
               <ul>
@@ -118,6 +118,19 @@ export default function AchitecturePage() {
                   <FontAwesomeIcon icon={faFontAwesome} />
                   &nbsp;FontAwesome Icons
                 </li>
+              </ul>
+
+              <h2>Testing and Build Tools</h2>
+              <ul>
+                <li>Webpack</li>
+                <li>
+                  <FontAwesomeIcon icon={faGulp} />
+                  &nbsp;Gulp.js
+                </li>
+                <li>Jest</li>
+                <li>Jasmine</li>
+                <li>Vite and Vitest</li>
+                <li>Playwright</li>
               </ul>
 
               <h2>Legacy</h2>
@@ -163,14 +176,6 @@ export default function AchitecturePage() {
                   <FontAwesomeIcon icon={faNodeJs} />
                   &nbsp;Node.js and NPM
                 </li>
-                <li>Webpack</li>
-                <li>
-                  <FontAwesomeIcon icon={faGulp} />
-                  &nbsp;Gulp.js
-                </li>
-                <li>Jest</li>
-                <li>Jasmine</li>
-                <li>Vite and Vitest</li>
                 <li>Azure DevOps and Azure Pipelines</li>
                 <li>
                   <FontAwesomeIcon icon={faDocker} />
