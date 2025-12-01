@@ -11,23 +11,25 @@ import {
   faHtml5,
   faJs,
   faLess,
+  faLinux,
   faNodeJs,
   faReact,
   faSass,
   faSlack,
-  faVuejs
+  faVuejs,
+  faWindows
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export default function AchitecturePage() {
+export default function SkillsPage() {
   return (
     <>
-      <PageHeader>Architecture &amp; Technology</PageHeader>
+      <PageHeader>Skills</PageHeader>
       <br />
       <section className="gap-8 space-y-12 lg:block lg:columns-2 max_lg:flex max_lg:w-full max_lg:flex-col max_lg:items-stretch">
         <Card>
           <Card.Body>
-            <Card.Title>Architectural Patterns &amp; Practices</Card.Title>
+            <Card.Title>Patterns &amp; Practices</Card.Title>
             <div className="prose max-w-none">
               <ul>
                 <li>MVVM</li>
@@ -76,7 +78,8 @@ export default function AchitecturePage() {
               <ul>
                 <li>C#</li>
                 <li>SQL</li>
-                <li>JavaScript/TypeScript (Next.js and Node.js)</li>
+                <li>JavaScript/TypeScript (Node.js, Next.js, Nuxt)</li>
+                <li>JSON</li>
                 <li>XML</li>
               </ul>
             </div>
@@ -110,6 +113,8 @@ export default function AchitecturePage() {
                 </li>
                 <li>Nuxt</li>
                 <li>Pinia</li>
+                <li>GraphQL (Apollo client)</li>
+                <li>Supabase JavaScript client</li>
                 <li>OData (Breeze)</li>
                 <li>Highcharts</li>
                 <li>JSONata</li>
@@ -144,7 +149,7 @@ export default function AchitecturePage() {
                   <FontAwesomeIcon icon={faBootstrap} />
                   &nbsp;Bootstrap
                 </li>
-                <li>jQuery/jQuery-UI</li>
+                <li>jQuery / jQuery-UI</li>
               </ul>
             </div>
           </Card.Body>
@@ -155,13 +160,17 @@ export default function AchitecturePage() {
             <Card.Title>Back-end Frameworks</Card.Title>
             <div className="prose max-w-none">
               <ul>
-                <li>.NET and .NET Core</li>
+                <li>.NET and .NET Core (Modern)</li>
                 <li>ASP.Net and ASP.Net Core</li>
                 <li>ASP.Net MVC and Web API</li>
                 <li>Entity Framework and Entity Framework Core</li>
                 <li>Dapper</li>
+                <li>Hot Chocolate (.NET GraphQL API Framework)</li>
                 <li>Identity Framework</li>
                 <li>OAuth / OpenID / OIDC</li>
+                <li>Node.js</li>
+                <li>Next.js</li>
+                <li>Nuxt</li>
               </ul>
             </div>
           </Card.Body>
@@ -204,6 +213,25 @@ export default function AchitecturePage() {
                 <li>PostgreSQL</li>
                 <li>Supabase</li>
                 <li>Vercel</li>
+              </ul>
+            </div>
+          </Card.Body>
+        </Card>
+
+        <Card>
+          <Card.Body>
+            <Card.Title>Operating Systems &amp; Environments</Card.Title>
+            <div className="prose max-w-none">
+              <ul>
+                <li>
+                  <FontAwesomeIcon icon={faWindows} />
+                  &nbsp;Windows &amp; Windows Server
+                </li>
+                <li>
+                  <FontAwesomeIcon icon={faLinux} />
+                  &nbsp;Linux (Debian and Alpine) &amp; WSL
+                </li>
+                <li>Arduino (Arduino IDE &amp; C++ / Wiring)</li>
               </ul>
             </div>
           </Card.Body>

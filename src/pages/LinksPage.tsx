@@ -8,7 +8,7 @@ import {
 import farmHubWebsitePreviewImg from '@/assets/website-screenshots/farm-hub-home-page-screenshot.jpg';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
-import ExternalLinkUrls from '@/utils/external-link-urls';
+import { ExternalLinkUrls } from '@/utils';
 
 export default function LinksPage() {
   return (
@@ -26,7 +26,7 @@ export default function LinksPage() {
                     <a
                       className="mb-2 self-start"
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       href={ExternalLinkUrls.FarmHub}
                     >
                       <img
@@ -41,6 +41,7 @@ export default function LinksPage() {
                       themeColor="primary"
                       href={ExternalLinkUrls.FarmHub}
                       target="_blank"
+                      rel="noopener noreferrer"
                       icon={faExternalLink}
                       size="sm"
                       className="justify-start self-start"
@@ -91,6 +92,7 @@ export default function LinksPage() {
                     themeColor="primary"
                     href={ExternalLinkUrls.LinkedIn}
                     target="_blank"
+                    rel="noopener noreferrer"
                     icon={faLinkedin}
                     size="sm"
                     className="justify-start"
@@ -103,6 +105,7 @@ export default function LinksPage() {
                     themeColor="primary"
                     href={ExternalLinkUrls.GitHub}
                     target="_blank"
+                    rel="noopener noreferrer"
                     icon={faGithub}
                     size="sm"
                     className="justify-start"
@@ -115,6 +118,7 @@ export default function LinksPage() {
                     themeColor="primary"
                     href={ExternalLinkUrls.Source}
                     target="_blank"
+                    rel="noopener noreferrer"
                     icon={faCode}
                     size="sm"
                     className="justify-start"

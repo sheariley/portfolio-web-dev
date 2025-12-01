@@ -1,5 +1,4 @@
 import classnames from 'classnames';
-import classNames from 'classnames';
 import {
   ComponentPropsWithoutRef,
   PropsWithChildren,
@@ -15,8 +14,8 @@ export type ModalRef = {
   close(): void;
 };
 
-type ModalProps = PropsWithChildren &
-  ComponentPropsWithoutRef<'dialog'> & {
+type ModalProps = PropsWithChildren
+  & ComponentPropsWithoutRef<'dialog'> & {
     onClose?: ReactEventHandler<HTMLDialogElement>;
     containerClassNames?: string;
   };
@@ -43,7 +42,7 @@ const Modal = forwardRef<ModalRef, ModalProps>(function Modal(
       onClose={onClose}
       {...rest}
     >
-      <div className={classNames('modal-box relative', className)}>
+      <div className={classnames('modal-box relative', className)}>
         <form method="dialog">
           <button className="btn btn-circle btn-ghost btn-sm absolute right-2 top-2">
             ✕

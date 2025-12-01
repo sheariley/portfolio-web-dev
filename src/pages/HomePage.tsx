@@ -1,5 +1,6 @@
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import {
+  faBook,
   faBusinessTime,
   faEnvelope,
   faExternalLink
@@ -7,7 +8,7 @@ import {
 
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
-import ExternalLinkUrls from '@/utils/external-link-urls';
+import { ExternalLinkUrls } from '@/utils';
 
 export default function HomePage() {
   return (
@@ -58,6 +59,17 @@ export default function HomePage() {
             <li>
               <Button
                 themeColor="primary"
+                to="/skills"
+                icon={faBook}
+                size="sm"
+                className="w-full justify-start"
+              >
+                Skills
+              </Button>
+            </li>
+            <li>
+              <Button
+                themeColor="primary"
                 to="/experience"
                 icon={faBusinessTime}
                 size="sm"
@@ -82,6 +94,7 @@ export default function HomePage() {
                 themeColor="primary"
                 href={ExternalLinkUrls.GitHub}
                 target="_blank"
+                rel="noopener noreferrer"
                 icon={faGithub}
                 size="sm"
                 className="w-full justify-start"
@@ -94,6 +107,7 @@ export default function HomePage() {
                 themeColor="primary"
                 href={ExternalLinkUrls.LinkedIn}
                 target="_blank"
+                rel="noopener noreferrer"
                 icon={faLinkedin}
                 size="sm"
                 className="w-full justify-start"

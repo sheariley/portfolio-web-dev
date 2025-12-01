@@ -1,6 +1,6 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
-import ArchitecturePage from '@/pages/ArchitecturePage';
+import SkillsPage from '@/pages/SkillsPage';
 import CertificationsPage from '@/pages/CertificationsPage';
 import ExperiencePage from '@/pages/ExperiencePage';
 import HomePage from '@/pages/HomePage';
@@ -8,7 +8,7 @@ import RootLayout from '@/pages/RootLayout';
 import LinksPage from './pages/LinksPage';
 import NotFoundPage from './pages/NotFoundPage';
 import RedirectPage from './pages/RedirectPage';
-import ExternalLinkUrls from './utils/external-link-urls';
+import { ExternalLinkUrls } from './utils';
 
 const router = createBrowserRouter([
   {
@@ -21,8 +21,8 @@ const router = createBrowserRouter([
         element: <HomePage />
       },
       {
-        path: 'architecture',
-        element: <ArchitecturePage />
+        path: 'skills',
+        element: <SkillsPage />
       },
       {
         path: 'experience',
