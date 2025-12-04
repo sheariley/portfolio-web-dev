@@ -351,11 +351,10 @@ export default function ExperiencePage() {
                   </li>
                   <li>
                     Established new schema for storing multiple frameworks of
-                    educational standards, spanning multiple subjects. The
-                    schema was designed in a way that would allow attributes and
-                    their values to be dynamically associated to a set of
-                    standards within a framework/subject grouping without
-                    changes being made to the schema.
+                    educational standards, spanning multiple subjects. The new
+                    schema allowed questions from our question bank to be
+                    associated with multiple educational standards from
+                    different standard frameworks.
                   </li>
                   <li>
                     Designed and implemented application for entry and
