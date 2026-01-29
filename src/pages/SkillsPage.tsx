@@ -41,6 +41,7 @@ export default function SkillsPage() {
                 <li>N-Tier</li>
                 <li>Cloud & Distributed</li>
                 <li>CI/CD</li>
+                <li>Microservices</li>
               </ul>
             </div>
           </Card.Body>
@@ -78,7 +79,7 @@ export default function SkillsPage() {
               <ul>
                 <li>C#</li>
                 <li>SQL</li>
-                <li>JavaScript/TypeScript (Node.js, Next.js, Nuxt)</li>
+                <li>JavaScript/TypeScript (Node.js, Express, Next.js, Nuxt)</li>
                 <li>JSON</li>
                 <li>XML</li>
               </ul>
@@ -169,8 +170,25 @@ export default function SkillsPage() {
                 <li>Identity Framework</li>
                 <li>OAuth / OpenID / OIDC</li>
                 <li>Node.js</li>
+                <li>Express</li>
                 <li>Next.js</li>
                 <li>Nuxt</li>
+                <li>AuthJS</li>
+              </ul>
+            </div>
+          </Card.Body>
+        </Card>
+
+        <Card>
+          <Card.Body>
+            <Card.Title>Databases</Card.Title>
+            <div className="prose max-w-none">
+              <ul>
+                <li>Microsoft SQL Server</li>
+                <li>PostgreSQL</li>
+                <li>Supabase</li>
+                <li>MongoDB</li>
+                <li>Redis</li>
               </ul>
             </div>
           </Card.Body>
@@ -201,6 +219,7 @@ export default function SkillsPage() {
                 <li>JetBrains Webstorm</li>
                 <li>Adobe Photoshop</li>
                 <li>GIMP</li>
+                <li>Figma</li>
                 <li>
                   <FontAwesomeIcon icon={faSlack} />
                   &nbsp;Slack
@@ -210,9 +229,10 @@ export default function SkillsPage() {
                 <li>Microsoft PowerPoint</li>
                 <li>Microsoft SQL Server Management Studio</li>
                 <li>DB Visualizer</li>
-                <li>PostgreSQL</li>
-                <li>Supabase</li>
                 <li>Vercel</li>
+                <li>OpenTelemetry</li>
+                <li>OpenSearch</li>
+                <li>Jaeger</li>
               </ul>
             </div>
           </Card.Body>
