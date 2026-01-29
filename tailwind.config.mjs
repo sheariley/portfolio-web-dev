@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable @typescript-eslint/no-require-imports */
 /** @type {import('tailwindcss').Config} */
 
 export default {
@@ -54,7 +55,6 @@ export default {
   },
   plugins: [
     require('@tailwindcss/typography'),
-    require('tailwindcss-3d'),
     require('daisyui')
   ],
   content: ['./src/**/*.{mjs,js,ts,jsx,tsx}'],
