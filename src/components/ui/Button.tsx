@@ -9,7 +9,7 @@ import {
   RefAttributes,
   forwardRef
 } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import Icon from './Icon';
 
 export type ButtonDisplayType = 'default' | 'link' | 'outline';

@@ -16,7 +16,7 @@ import Button from '@/components/ui/Button';
 import Header from '@/components/ui/Header';
 import NavMenu from '@/components/ui/NavMenu';
 import { ExternalLinkUrls } from '@/utils';
-import { ScrollRestoration } from 'react-router-dom';
+import { ScrollRestoration } from 'react-router';
 
 export default function RootLayout() {
   const [drawerOpen, setDrawerOpen] = useState(false);
