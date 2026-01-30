@@ -11,7 +11,7 @@ import PageHeader from '@/components/ui/PageHeader';
 
 export default function CertificationsPage() {
   const modalRef = useRef<ModalRef>(null);
-  const [fullscreenImage, setFullScreenImage] = useState('');
+  const [fullscreenImage, setFullScreenImage] = useState<string>();
 
   function handleCertClick(event: MouseEvent<HTMLImageElement>) {
     setFullScreenImage(event.currentTarget.src);
