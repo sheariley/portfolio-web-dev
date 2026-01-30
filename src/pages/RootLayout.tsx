@@ -43,7 +43,7 @@ export default function RootLayout() {
         />
         <div className="drawer-content flex flex-col items-center p-2 pt-4 md:px-6 lg:p-8">
           {!drawerOpen && (
-            <div className="fixed left-0 top-0 z-50 flex w-full justify-start border-b-2 border-neutral/30 bg-neutral/30 p-1 shadow-2xl backdrop-blur-xl lg:hidden">
+            <div className="fixed left-0 top-0 z-50 flex w-full justify-start border-b border-base-300 bg-base-100 p-1 lg:hidden">
               <Button
                 aria-label="open sidebar"
                 widthType="square"
