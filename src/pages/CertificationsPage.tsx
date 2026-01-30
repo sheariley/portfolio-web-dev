@@ -1,4 +1,4 @@
-import { MouseEvent, useRef, useState } from 'react';
+import { type MouseEvent, useRef, useState } from 'react';
 
 import reactTypeScriptCert from '@/assets/cert-images/udemy-react-and-typescript-the-practical-guide.jpg';
 import reactNativeCert from '@/assets/cert-images/udemy-react-native-the-practical-guide-2024.jpg';
@@ -6,7 +6,7 @@ import reactCert from '@/assets/cert-images/udemy-react-the-complete-guide-2024.
 import figmaEssentialsCert from '@/assets/cert-images/udemy-figma-ui-ux-design-essentials-2024.jpg';
 
 import Card from '@/components/ui/Card';
-import Modal, { ModalRef } from '@/components/ui/Modal';
+import Modal, { type ModalRef } from '@/components/ui/Modal';
 import PageHeader from '@/components/ui/PageHeader';
 
 export default function CertificationsPage() {

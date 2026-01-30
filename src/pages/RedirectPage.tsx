@@ -1,6 +1,6 @@
 import Card from '@/components/ui/Card';
 import PageHeader from '@/components/ui/PageHeader';
-import { UIMatch, useMatches } from 'react-router';
+import { type UIMatch, useMatches } from 'react-router';
 
 export default function RedirectPage() {
   const matches = useMatches() as UIMatch<

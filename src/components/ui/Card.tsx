@@ -1,6 +1,6 @@
-import { ComponentProps } from 'react';
+import { type ComponentProps } from 'react';
 import { twMerge } from 'tailwind-merge';
-import { ThemeColor } from './_common';
+import { type ThemeColor } from './_common';
 
 export type CardSize = 'card-xs' | 'card-sm' | 'card-md' | 'card-lg' | 'card-xl';
 export type CardBorderStyle = 'card-border' | 'card-dash';

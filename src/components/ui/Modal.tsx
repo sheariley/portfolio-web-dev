@@ -1,8 +1,8 @@
 import classnames from 'classnames';
 import {
-  ComponentPropsWithoutRef,
-  PropsWithChildren,
-  ReactEventHandler,
+  type ComponentPropsWithoutRef,
+  type PropsWithChildren,
+  type ReactEventHandler,
   forwardRef,
   useImperativeHandle,
   useRef

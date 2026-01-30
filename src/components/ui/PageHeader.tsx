@@ -1,4 +1,4 @@
-import { PropsWithChildrenAndClassName } from '@/utils';
+import { type PropsWithChildrenAndClassName } from '@/utils';
 import { twJoin } from 'tailwind-merge';
 
 export default function PageHeader({

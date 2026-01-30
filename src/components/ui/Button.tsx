@@ -1,12 +1,12 @@
-import { ThemeColor } from '@/utils';
-import { IconProp, SizeProp } from '@fortawesome/fontawesome-svg-core';
+import { type ThemeColor } from '@/utils';
+import { type IconProp, type SizeProp } from '@fortawesome/fontawesome-svg-core';
 import classnames from 'classnames';
 import {
   Children,
-  ComponentPropsWithRef,
-  PropsWithChildren,
-  Ref,
-  RefAttributes,
+  type ComponentPropsWithRef,
+  type PropsWithChildren,
+  type Ref,
+  type RefAttributes,
   forwardRef
 } from 'react';
 import { Link } from 'react-router';

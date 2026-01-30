@@ -1,5 +1,5 @@
 import { type ClassValue, clsx } from 'clsx';
-import { PropsWithChildren } from 'react';
+import { type PropsWithChildren } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 export interface PropsWithChildrenAndClassName extends PropsWithChildren {
