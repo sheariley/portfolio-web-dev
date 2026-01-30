@@ -41,9 +41,9 @@ export default function CertificationsPage() {
       <br />
       <section className="gap-8 space-y-12 lg:block lg:columns-2 max-lg:flex max-lg:flex-col max-lg:items-center">
         <Card>
-          <Card.Body>
+          <Card.Body className="p-0 md:p-0 md:pb-0">
             <img
-              className="m-0 cursor-pointer"
+              className="m-0 cursor-pointer not-prose"
               src={reactCert}
               alt="Udemy Certificate: React - The Complete Guide 2024"
               onClick={handleCertClick}
@@ -51,9 +51,9 @@ export default function CertificationsPage() {
           </Card.Body>
         </Card>
         <Card>
-          <Card.Body>
+          <Card.Body className="p-0 md:p-0 md:pb-0">
             <img
-              className="m-0 cursor-pointer"
+              className="m-0 cursor-pointer not-prose"
               src={reactTypeScriptCert}
               alt="Udemy Certificate: React & TypeScript - The Practical Guide"
               onClick={handleCertClick}
@@ -61,9 +61,9 @@ export default function CertificationsPage() {
           </Card.Body>
         </Card>
         <Card>
-          <Card.Body>
+          <Card.Body className="p-0 md:p-0 md:pb-0">
             <img
-              className="m-0 cursor-pointer"
+              className="m-0 cursor-pointer not-prose"
               src={reactNativeCert}
               alt="Udemy Certificate: React Native - The Practical Guide [2024]"
               onClick={handleCertClick}
@@ -71,9 +71,9 @@ export default function CertificationsPage() {
           </Card.Body>
         </Card>
         <Card>
-          <Card.Body>
+          <Card.Body className="p-0 md:p-0 md:pb-0">
             <img
-              className="m-0 cursor-pointer"
+              className="m-0 cursor-pointer not-prose"
               src={figmaEssentialsCert}
               alt="Udemy Certificate: Figma UI UX Design Essentials"
               onClick={handleCertClick}

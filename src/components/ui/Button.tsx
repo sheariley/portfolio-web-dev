@@ -203,7 +203,7 @@ function ButtonChildrenWrapper({
 function ButtonIconWrapper({ icon, iconSize }: ButtonIconProps) {
   return (
     !!icon && (
-      <span className="inline-flex min-w-[20px] place-items-center justify-center">
+      <span className="inline-flex min-w-5 place-items-center justify-center">
         <Icon icon={icon} size={iconSize} />
       </span>
     )

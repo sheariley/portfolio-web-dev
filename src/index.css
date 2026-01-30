@@ -5,7 +5,7 @@
 
 @plugin "@tailwindcss/typography";
 @plugin "daisyui" {
-  themes: siren --default;
+  themes: corporate --default;
   exclude: rootscrollgutter;
 };
 
@@ -14,12 +14,52 @@
 }
 
 @layer base {
+  :root {
+    @apply bg-base-200 text-base-content h-full md:overflow-y-scroll;
+  }
+
+  :root:has(*:is(.expanded-popout)) {
+    @apply md:overflow-hidden;
+  }
+
+  :root, body, .container-main {
+    @apply flex flex-col items-stretch;
+  }
+
   body {
-    @apply antialiased flex flex-col items-stretch p-0 bg-base-200 text-base-content bg-[url('assets/page-bg.jpg')] bg-cover;
+    @apply antialiased p-0 bg-base-200 text-base-content;
   }
 
   #root {
     @apply flex flex-col items-center mx-0;
+  }
+
+  :root:has(*:is(.layout-full)) {
+    @apply justify-items-stretch items-stretch h-full;
+  }
+
+  body:has(*:is(.layout-full)), body:has(*:is(.layout-full)) > #root {
+    @apply justify-items-stretch items-stretch basis-full;
+  }
+
+  body:has(*:is(.layout-full)) > header:first {
+    @apply justify-self-start;
+  }
+
+  body:has(*:is(.layout-full)) > .container-main {
+    @apply basis-full justify-items-stretch items-stretch;
+  }
+
+  body:has(*:is(.layout-full)) > .container-main > :has(~ .layout-content) {
+    @apply justify-self-start;
+  }
+
+  body:has(*:is(.layout-full)) > .container-main > .layout-content ~ :not(.layout-content) {
+    @apply justify-self-end;
+  }
+
+  body:has(*:is(.layout-full)) > .container-main > .layout-content {
+    @apply basis-full;
   }
 
   /* Firefox */

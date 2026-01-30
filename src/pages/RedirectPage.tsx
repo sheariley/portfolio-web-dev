@@ -15,26 +15,30 @@ export default function RedirectPage() {
 
   return (
     <>
-      <PageHeader className="mt-12">Redirecting...</PageHeader>
-      <br />
-      <section className="flex flex-col items-stretch gap-8 space-y-12 p-4">
-        <Card>
-          <Card.Body>
-            {redirectUrl ? (
-              <>
-                <h3>You are being redirected to</h3>
-                <div>
-                  <a href={redirectUrl}>
-                    <strong>{redirectUrl}</strong>
-                  </a>
-                </div>
-              </>
-            ) : (
-              <h3>Invalid Redirect URL</h3>
-            )}
-          </Card.Body>
-        </Card>
-      </section>
+      <main className="container container-main mx-auto px-4 pb-16 h-full md:px-6 lg:px-8">
+        <div className="layout-content layout-full flex flex-col justify-center h-full">
+          <PageHeader className="mt-12">Redirecting...</PageHeader>
+          <br />
+          <section className="flex flex-col items-stretch gap-8 space-y-12 p-4">
+            <Card>
+              <Card.Body>
+                {redirectUrl ? (
+                  <>
+                    <h3>You are being redirected to</h3>
+                    <div>
+                      <a href={redirectUrl}>
+                        <strong>{redirectUrl}</strong>
+                      </a>
+                    </div>
+                  </>
+                ) : (
+                  <h3>Invalid Redirect URL</h3>
+                )}
+              </Card.Body>
+            </Card>
+          </section>
+        </div>
+      </main>
     </>
   );
 }

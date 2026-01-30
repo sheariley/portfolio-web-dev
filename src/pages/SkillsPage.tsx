@@ -28,8 +28,8 @@ export default function SkillsPage() {
       <br />
       <section className="gap-8 space-y-12 lg:block lg:columns-2 max-lg:flex max-lg:w-full max-lg:flex-col max-lg:items-stretch">
         <Card>
+          <Card.Title>Patterns &amp; Practices</Card.Title>
           <Card.Body>
-            <Card.Title>Patterns &amp; Practices</Card.Title>
             <div className="prose max-w-none">
               <ul>
                 <li>MVVM</li>
@@ -48,8 +48,8 @@ export default function SkillsPage() {
         </Card>
 
         <Card>
+          <Card.Title>Programming Languages</Card.Title>
           <Card.Body>
-            <Card.Title>Programming Languages</Card.Title>
             <div className="prose max-w-none">
               <h2>Front-end</h2>
               <ul>
@@ -88,8 +88,8 @@ export default function SkillsPage() {
         </Card>
 
         <Card>
+          <Card.Title>Front-end Frameworks and Tools</Card.Title>
           <Card.Body>
-            <Card.Title>Front-end Frameworks and Tools</Card.Title>
             <div className="prose max-w-none">
               <h2>Modern</h2>
               <ul>
@@ -157,8 +157,8 @@ export default function SkillsPage() {
         </Card>
 
         <Card>
+          <Card.Title>Back-end Frameworks</Card.Title>
           <Card.Body>
-            <Card.Title>Back-end Frameworks</Card.Title>
             <div className="prose max-w-none">
               <ul>
                 <li>.NET and .NET Core (Modern)</li>
@@ -180,8 +180,8 @@ export default function SkillsPage() {
         </Card>
 
         <Card>
+          <Card.Title>Databases</Card.Title>
           <Card.Body>
-            <Card.Title>Databases</Card.Title>
             <div className="prose max-w-none">
               <ul>
                 <li>Microsoft SQL Server</li>
@@ -195,8 +195,8 @@ export default function SkillsPage() {
         </Card>
 
         <Card>
+          <Card.Title>Platforms and Tools</Card.Title>
           <Card.Body>
-            <Card.Title>Platforms and Tools</Card.Title>
             <div className="prose max-w-none">
               <ul>
                 <li>
@@ -239,8 +239,8 @@ export default function SkillsPage() {
         </Card>
 
         <Card>
+          <Card.Title>Operating Systems &amp; Environments</Card.Title>
           <Card.Body>
-            <Card.Title>Operating Systems &amp; Environments</Card.Title>
             <div className="prose max-w-none">
               <ul>
                 <li>

@@ -56,8 +56,10 @@ export default function RootLayout() {
             </div>
           )}
           <Header />
-          <main className="w-full">
-            <Outlet />
+          <main className="container container-main mx-auto px-4 pb-16 md:px-6 lg:px-8">
+            <div className="layout-content">
+              <Outlet />
+            </div>
           </main>
         </div>
         <div className="drawer-side shadow-xl shadow-black">
@@ -67,7 +69,7 @@ export default function RootLayout() {
             className="drawer-overlay lg:hidden"
             onClick={handleDrawerClose}
           ></label>
-          <div className="relative flex min-h-full w-48 flex-col border-r-2 border-neutral/30 bg-neutral/30 p-1 text-base-content backdrop-blur-xl max-lg:pt-8">
+          <div className="relative flex min-h-full w-48 flex-col border-r-2 border-base-100/30 bg-base-100 p-1 text-base-content backdrop-blur-xl max-lg:pt-8">
             <Button
               aria-label="close sidebar"
               className="absolute right-2 top-2 lg:hidden"

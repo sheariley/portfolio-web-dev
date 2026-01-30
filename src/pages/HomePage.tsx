@@ -13,9 +13,9 @@ import { ExternalLinkUrls } from '@/utils';
 export default function HomePage() {
   return (
     <section className="flex flex-col items-center space-y-6 pb-5 md:space-y-12 lg:pb-0">
-      <Card className="w-full md:sticky md:top-12 md:min-h-[calc(100svh_-_100px)] lg:min-h-[calc(100svh_-_80px)]">
+      <Card className="w-full">
+        <Card.Title>Who I Am</Card.Title>
         <Card.Body className="grow-0">
-          <Card.Title>Who I Am</Card.Title>
           <p className="max-lg:my-1">
             I am a highly driven and accomplished developer and architect whose
             passion is matched only by my relentless pursuit of perfection. With
@@ -55,7 +55,7 @@ export default function HomePage() {
             Keep scrolling for more about me and my story, explore the website
             via the navigation menu, or check out one of the following links:
           </p>
-          <ul className="my-0 list-none pl-0 *:my-4 *:flex *:w-[160px] *:pl-0 md:flex md:flex-row md:space-x-4">
+          <ul className="my-0 list-none pl-0 *:my-4 *:flex *:w-40 *:pl-0 md:flex md:flex-row md:space-x-4">
             <li>
               <Button
                 themeColor="primary"
@@ -129,9 +129,9 @@ export default function HomePage() {
           </div>
         </Card.Body>
       </Card>
-      <Card className="w-full md:sticky md:top-14 md:min-h-[calc(100svh_-_100px)]">
+      <Card className="w-full">
+        <Card.Title>Goals and Aspirations</Card.Title>
         <Card.Body className="grow-0">
-          <Card.Title>Goals and Aspirations</Card.Title>
           <p className="max-lg:my-1">
             I am eager to work with others who are highly driven, open-minded,
             and share my desire to achieve great things.
@@ -159,9 +159,9 @@ export default function HomePage() {
           </p>
         </Card.Body>
       </Card>
-      <Card className="w-full md:sticky md:top-16 md:min-h-[calc(100svh_-_100px)]">
+      <Card className="w-full">
+        <Card.Title>How I Innovate</Card.Title>
         <Card.Body className="grow-0">
-          <Card.Title>How I Innovate</Card.Title>
           <p className="max-lg:my-1">
             As an experienced web developer passionate about researching new
             technologies and paradigms I bring immense value to a business. My
@@ -187,9 +187,9 @@ export default function HomePage() {
           </p>
         </Card.Body>
       </Card>
-      <Card className="w-full md:sticky md:top-20 md:min-h-[calc(100svh_-_100px)] lg:min-h-[calc(100svh_-_105px)]">
+      <Card className="w-full">
+        <Card.Title>How It All Started</Card.Title>
         <Card.Body className="grow-0">
-          <Card.Title>How It All Started</Card.Title>
           <p className="max-lg:my-1">
             It all started when I discovered that my high school offered
             programming courses. I was immediately intrigued by the potential of

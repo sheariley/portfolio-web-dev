@@ -12,10 +12,10 @@ export default function ExperiencePage() {
       <br />
       <section className="flex flex-col items-center gap-8 space-y-12">
         <Card className="w-full">
+          <Card.Title className="mb-0 flex justify-center">
+            Atlas Technology Group
+          </Card.Title>
           <Card.Body>
-            <Card.Title className="mb-0 flex justify-center">
-              Atlas Technology Group
-            </Card.Title>
             <div className="prose mb-4 max-w-none">
               <div className="text-center">
                 <div className="text-lg">Multiple Roles (see below)</div>
@@ -237,10 +237,10 @@ export default function ExperiencePage() {
         </Card>
 
         <Card className="w-full">
+          <Card.Title className="mb-0 flex justify-center">
+            The Learning Institute
+          </Card.Title>
           <Card.Body>
-            <Card.Title className="mb-0 flex justify-center">
-              The Learning Institute
-            </Card.Title>
             <div className="prose mb-4 max-w-none">
               <div className="text-center">
                 <div className="text-lg">
@@ -400,10 +400,10 @@ export default function ExperiencePage() {
         </Card>
 
         <Card className="w-full">
+          <Card.Title className="mb-0 flex justify-center">
+            Cities In Touch
+          </Card.Title>
           <Card.Body>
-            <Card.Title className="mb-0 flex justify-center">
-              Cities In Touch
-            </Card.Title>
             <div className="prose mb-4 max-w-none">
               <div className="text-center">
                 <div className="text-lg">CTO & Chief Software Engineer</div>

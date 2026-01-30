@@ -15,22 +15,22 @@ export default function LinksPage() {
     <>
       <section className="flex flex-col items-stretch gap-8 space-y-12">
         <Card>
+          <Card.Title className="mb-0 flex justify-start">
+            Publicly Accessible Websites
+          </Card.Title>
           <Card.Body>
-            <Card.Title className="mb-0 flex justify-start">
-              Publicly Accessible Websites
-            </Card.Title>
             <div className="flex flex-col items-start">
-              <ul className="my-0 list-none space-y-6 pl-0 *:flex *:min-w-[180px] *:flex-col *:items-start *:pl-0">
+              <ul className="my-0 list-none space-y-6 pl-0 *:flex *:min-w-45 *:flex-col *:items-start *:pl-0">
                 <li>
                   <figure className="my-0 flex flex-col items-start">
                     <a
-                      className="mb-2 self-start"
+                      className="mb-4 self-start"
                       target="_blank"
                       rel="noopener noreferrer"
                       href={ExternalLinkUrls.FarmHub}
                     >
                       <img
-                        className="my-0 rounded-lg"
+                        className="my-0 rounded-lg not-prose"
                         width="240px"
                         height="180px"
                         src={farmHubWebsitePreviewImg}
@@ -69,12 +69,12 @@ export default function LinksPage() {
         </Card>
 
         <Card>
+          <Card.Title className="mb-0 flex justify-start">
+            Links &amp; Downloads
+          </Card.Title>
           <Card.Body>
-            <Card.Title className="mb-0 flex justify-start">
-              Links &amp; Downloads
-            </Card.Title>
             <div className="mb-4 flex flex-col items-start">
-              <ul className="my-0 list-none space-y-6 pl-0 *:flex *:min-w-[180px] *:pl-0">
+              <ul className="my-0 list-none space-y-6 pl-0 *:flex *:min-w-45 *:pl-0">
                 <li>
                   <Button
                     themeColor="primary"
