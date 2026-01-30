@@ -11,6 +11,7 @@ import {
 } from 'react';
 import { Link } from 'react-router';
 import Icon from './Icon';
+import { twMerge } from 'tailwind-merge';
 
 export type ButtonDisplayType = 'default' | 'link' | 'outline';
 
@@ -139,12 +140,13 @@ const AnchorButton = forwardRef<
     icon,
     iconSize,
     iconAfterText,
+    className,
     ...props
   }: AnchorSpecificProps & ButtonIconProps,
   ref
 ) {
   return (
-    <a ref={ref as RefAttributes<HTMLAnchorElement>['ref']} {...props}>
+    <a ref={ref as RefAttributes<HTMLAnchorElement>['ref']} {...props} className={twMerge('no-underline', className)}>
       <ButtonChildrenWrapper
         icon={icon}
         iconSize={iconSize}
@@ -165,12 +167,13 @@ const LinkButton = forwardRef<
     icon,
     iconSize,
     iconAfterText,
+    className,
     ...props
   }: LinkSpecificProps & ButtonIconProps,
   ref
 ) {
   return (
-    <Link ref={ref as RefAttributes<HTMLAnchorElement>['ref']} {...props}>
+    <Link ref={ref as RefAttributes<HTMLAnchorElement>['ref']} {...props} className={twMerge('no-underline', className)}>
       <ButtonChildrenWrapper
         icon={icon}
         iconSize={iconSize}
