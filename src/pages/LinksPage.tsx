@@ -72,62 +72,60 @@ export default function LinksPage() {
           <Card.Title className="mb-0 flex justify-start">
             Links &amp; Downloads
           </Card.Title>
-          <Card.Body>
-            <div className="mb-4 flex flex-col items-start">
-              <ul className="my-0 list-none space-y-6 pl-0 *:flex *:min-w-45 *:pl-0">
-                <li>
-                  <Button
-                    themeColor="primary"
-                    href="/resume.pdf"
-                    download
-                    icon={faFileText}
-                    size="sm"
-                    className="justify-start"
-                  >
-                    Resume
-                  </Button>
-                </li>
-                <li>
-                  <Button
-                    themeColor="primary"
-                    href={ExternalLinkUrls.LinkedIn}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    icon={faLinkedin}
-                    size="sm"
-                    className="justify-start"
-                  >
-                    Linked-In profile
-                  </Button>
-                </li>
-                <li>
-                  <Button
-                    themeColor="primary"
-                    href={ExternalLinkUrls.GitHub}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    icon={faGithub}
-                    size="sm"
-                    className="justify-start"
-                  >
-                    GitHub profile
-                  </Button>
-                </li>
-                <li>
-                  <Button
-                    themeColor="primary"
-                    href={ExternalLinkUrls.Source}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    icon={faCode}
-                    size="sm"
-                    className="justify-start"
-                  >
-                    Site Source Code
-                  </Button>
-                </li>
-              </ul>
-            </div>
+          <Card.Body className="@container">
+            <ul className="flex flex-col items-center my-0 list-none pl-0 *:my-4 *:flex *:w-40 *:pl-0 @lg:flex @lg:flex-row @lg:space-x-4">
+              <li>
+                <Button
+                  themeColor="primary"
+                  href="/resume.pdf"
+                  download
+                  icon={faFileText}
+                  size="sm"
+                  className="w-full justify-start whitespace-nowrap"
+                >
+                  Resume
+                </Button>
+              </li>
+              <li>
+                <Button
+                  themeColor="primary"
+                  href={ExternalLinkUrls.LinkedIn}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  icon={faLinkedin}
+                  size="sm"
+                  className="w-full justify-start whitespace-nowrap"
+                >
+                  Linked-In
+                </Button>
+              </li>
+              <li>
+                <Button
+                  themeColor="primary"
+                  href={ExternalLinkUrls.GitHub}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  icon={faGithub}
+                  size="sm"
+                  className="w-full justify-start whitespace-nowrap"
+                >
+                  GitHub
+                </Button>
+              </li>
+              <li>
+                <Button
+                  themeColor="primary"
+                  href={ExternalLinkUrls.Source}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  icon={faCode}
+                  size="sm"
+                  className="w-full justify-start whitespace-nowrap"
+                >
+                  Site Source Code
+                </Button>
+              </li>
+            </ul>
           </Card.Body>
         </Card>
       </section>

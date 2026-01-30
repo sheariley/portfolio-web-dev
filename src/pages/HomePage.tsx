@@ -15,7 +15,7 @@ export default function HomePage() {
     <section className="flex flex-col items-center space-y-6 pb-5 md:space-y-12 lg:pb-0">
       <Card className="w-full">
         <Card.Title>Who I Am</Card.Title>
-        <Card.Body className="grow-0">
+        <Card.Body className="@container grow-0">
           <p className="max-lg:my-1">
             I am a highly driven and accomplished developer and architect whose
             passion is matched only by my relentless pursuit of perfection. With
@@ -55,14 +55,14 @@ export default function HomePage() {
             Keep scrolling for more about me and my story, explore the website
             via the navigation menu, or check out one of the following links:
           </p>
-          <ul className="my-0 list-none pl-0 *:my-4 *:flex *:w-40 *:pl-0 md:flex md:flex-row md:space-x-4">
+          <ul className="flex flex-col items-center my-0 list-none pl-0 *:my-4 *:flex *:w-40 *:pl-0 @lg:flex @lg:flex-row @lg:space-x-4">
             <li>
               <Button
                 themeColor="primary"
                 to="/skills"
                 icon={faBook}
                 size="sm"
-                className="w-full justify-start"
+                className="w-full justify-start whitespace-nowrap"
               >
                 Skills
               </Button>
@@ -73,7 +73,7 @@ export default function HomePage() {
                 to="/experience"
                 icon={faBusinessTime}
                 size="sm"
-                className="w-full justify-start"
+                className="w-full justify-start whitespace-nowrap"
               >
                 Experience
               </Button>
@@ -84,7 +84,7 @@ export default function HomePage() {
                 to="/links"
                 icon={faExternalLink}
                 size="sm"
-                className="w-full justify-start"
+                className="w-full justify-start whitespace-nowrap"
               >
                 Links
               </Button>
@@ -97,9 +97,9 @@ export default function HomePage() {
                 rel="noopener noreferrer"
                 icon={faGithub}
                 size="sm"
-                className="w-full justify-start"
+                className="w-full justify-start whitespace-nowrap"
               >
-                GitHub profile
+                GitHub
               </Button>
             </li>
             <li>
@@ -110,9 +110,9 @@ export default function HomePage() {
                 rel="noopener noreferrer"
                 icon={faLinkedin}
                 size="sm"
-                className="w-full justify-start"
+                className="w-full justify-start whitespace-nowrap"
               >
-                Linked-In profile
+                Linked-In
               </Button>
             </li>
           </ul>
