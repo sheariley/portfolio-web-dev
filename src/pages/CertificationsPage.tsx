@@ -27,7 +27,7 @@ export default function CertificationsPage() {
     <>
       <Modal
         ref={modalRef}
-        containerClassNames="flex flex-col p-14 max_lg:p-4 items-center justify-center"
+        containerClassNames="flex flex-col p-14 max-lg:p-4 items-center justify-center"
         className="flex max-h-none w-full max-w-none flex-col p-2"
       >
         <img
@@ -39,7 +39,7 @@ export default function CertificationsPage() {
       </Modal>
       <PageHeader>Certifications</PageHeader>
       <br />
-      <section className="gap-8 space-y-12 lg:block lg:columns-2 max_lg:flex max_lg:flex-col max_lg:items-center">
+      <section className="gap-8 space-y-12 lg:block lg:columns-2 max-lg:flex max-lg:flex-col max-lg:items-center">
         <Card>
           <Card.Body>
             <img

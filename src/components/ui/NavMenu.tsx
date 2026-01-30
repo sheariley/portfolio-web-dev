@@ -32,7 +32,7 @@ function isNavMenuLinkItem(item: NavMenuItem): item is NavMenuLinkItem {
 
 function NavMenuItemIcon({ icon }: { icon: IconDefinition }) {
   return (
-    <span className="min-w-[20px] text-center">
+    <span className="min-w-5 text-center">
       <FontAwesomeIcon icon={icon} />
     </span>
   );

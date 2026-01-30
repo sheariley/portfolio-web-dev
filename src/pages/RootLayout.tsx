@@ -67,7 +67,7 @@ export default function RootLayout() {
             className="drawer-overlay lg:hidden"
             onClick={handleDrawerClose}
           ></label>
-          <div className="relative flex min-h-full w-48 flex-col border-r-2 border-neutral/30 bg-neutral/30 p-1 text-base-content backdrop-blur-xl max_lg:pt-8">
+          <div className="relative flex min-h-full w-48 flex-col border-r-2 border-neutral/30 bg-neutral/30 p-1 text-base-content backdrop-blur-xl max-lg:pt-8">
             <Button
               aria-label="close sidebar"
               className="absolute right-2 top-2 lg:hidden"

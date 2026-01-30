@@ -1,17 +1,21 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+@import "tailwindcss";
+@import './theme.css';
+
+@plugin "@tailwindcss/typography";
+@plugin "daisyui" {
+  themes: siren --default;
+  exclude: rootscrollgutter;
+};
+
+@theme {
+  --font-sans: "Roboto Flex", "Roboto", "ui-sans-serif", "system-ui", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
 
 @layer base {
-  :root {
-    background: none;
-    background: url('assets/page-bg.jpg') fixed;
-    background-color: theme('colors.base-100');
-    background-size: cover;
-  }
-
   body {
-    @apply flex flex-col items-stretch p-0;
+    @apply antialiased flex flex-col items-stretch p-0 bg-base-200 text-base-content bg-[url('assets/page-bg.jpg')] bg-cover;
   }
 
   #root {
@@ -22,7 +26,7 @@
   @supports (-moz-appearance: none) {
     * {
       scrollbar-width: thin;
-      scrollbar-color: theme('colors.info') theme('colors.base-100');
+      scrollbar-color: theme('colors.info') theme('colors.base-200');
     }
   }
 
@@ -47,5 +51,11 @@
       border-radius: 8px;
       border: 1px solid theme('colors.base-100');
     }
+  }
+}
+
+.modal {
+  &.modal-open, &[open], &:target {
+    @apply bg-black/75;
   }
 }
