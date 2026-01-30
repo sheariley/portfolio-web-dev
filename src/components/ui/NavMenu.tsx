@@ -1,33 +1,33 @@
-import { type IconDefinition } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { type MouseEvent } from 'react';
-import { NavLink } from 'react-router';
+import { type IconDefinition } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { type MouseEvent } from 'react'
+import { NavLink } from 'react-router'
 
 type NavMenuItemBase = {
-  label: string;
-  icon: IconDefinition;
-  onClick?(event: MouseEvent<HTMLAnchorElement>): void;
-};
+  label: string
+  icon: IconDefinition
+  onClick?(event: MouseEvent<HTMLAnchorElement>): void
+}
 
 type NavMenuRouteItem = NavMenuItemBase & {
-  path: string;
-};
+  path: string
+}
 
 type NavMenuLinkItem = NavMenuItemBase & {
-  href: string;
-  target?: string;
-  download?: boolean;
-};
+  href: string
+  target?: string
+  download?: boolean
+}
 
-type NavMenuItem = NavMenuRouteItem | NavMenuLinkItem;
+type NavMenuItem = NavMenuRouteItem | NavMenuLinkItem
 
 type NavMenuProps = {
-  menuItems: NavMenuItem[];
-  onItemClick?(event: MouseEvent<HTMLAnchorElement>): void;
-};
+  menuItems: NavMenuItem[]
+  onItemClick?(event: MouseEvent<HTMLAnchorElement>): void
+}
 
 function isNavMenuLinkItem(item: NavMenuItem): item is NavMenuLinkItem {
-  return 'href' in item;
+  return 'href' in item
 }
 
 function NavMenuItemIcon({ icon }: { icon: IconDefinition }) {
@@ -35,21 +35,18 @@ function NavMenuItemIcon({ icon }: { icon: IconDefinition }) {
     <span className="min-w-5 text-center">
       <FontAwesomeIcon icon={icon} />
     </span>
-  );
+  )
 }
 
 export default function NavMenu({ menuItems, onItemClick }: NavMenuProps) {
-  function handleItemClick(
-    item: NavMenuItem,
-    event: MouseEvent<HTMLAnchorElement>
-  ) {
-    if (onItemClick) onItemClick(event);
-    if (item.onClick) item.onClick(event);
+  function handleItemClick(item: NavMenuItem, event: MouseEvent<HTMLAnchorElement>) {
+    if (onItemClick) onItemClick(event)
+    if (item.onClick) item.onClick(event)
   }
 
   return (
     <ul className="menu flex-1 space-y-3">
-      {menuItems.map((item) => {
+      {menuItems.map(item => {
         if (isNavMenuLinkItem(item)) {
           return (
             <li key={item.href}>
@@ -63,7 +60,7 @@ export default function NavMenu({ menuItems, onItemClick }: NavMenuProps) {
                 {item.label}
               </a>
             </li>
-          );
+          )
         }
 
         return (
@@ -73,8 +70,8 @@ export default function NavMenu({ menuItems, onItemClick }: NavMenuProps) {
               {item.label}
             </NavLink>
           </li>
-        );
+        )
       })}
     </ul>
-  );
+  )
 }

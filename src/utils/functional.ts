@@ -1,7 +1,7 @@
 export function isTruthy(obj: unknown) {
-  return !!obj;
+  return !!obj
 }
 
 export function not<T extends (...args: unknown[]) => unknown>(func: T) {
-  return ((...args: unknown[]) => !func(...args)) as typeof func;
+  return ((...args: unknown[]) => !func(...args)) as typeof func
 }

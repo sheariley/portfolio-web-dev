@@ -1,4 +1,4 @@
-import classnames from 'classnames';
+import classnames from 'classnames'
 import {
   type ComponentPropsWithoutRef,
   type PropsWithChildren,
@@ -6,34 +6,34 @@ import {
   forwardRef,
   useImperativeHandle,
   useRef
-} from 'react';
-import { createPortal } from 'react-dom';
+} from 'react'
+import { createPortal } from 'react-dom'
 
 export type ModalRef = {
-  open(): void;
-  close(): void;
-};
+  open(): void
+  close(): void
+}
 
 type ModalProps = PropsWithChildren
   & ComponentPropsWithoutRef<'dialog'> & {
-    onClose?: ReactEventHandler<HTMLDialogElement>;
-    containerClassNames?: string;
-  };
+    onClose?: ReactEventHandler<HTMLDialogElement>
+    containerClassNames?: string
+  }
 
 const Modal = forwardRef<ModalRef, ModalProps>(function Modal(
   { onClose, children, className, containerClassNames, ...rest },
   ref
 ) {
-  const dialogRef = useRef<HTMLDialogElement>(null);
+  const dialogRef = useRef<HTMLDialogElement>(null)
 
   useImperativeHandle(ref, () => ({
     open() {
-      dialogRef.current?.showModal();
+      dialogRef.current?.showModal()
     },
     close() {
-      dialogRef.current?.close();
+      dialogRef.current?.close()
     }
-  }));
+  }))
 
   return createPortal(
     <dialog
@@ -44,9 +44,7 @@ const Modal = forwardRef<ModalRef, ModalProps>(function Modal(
     >
       <div className={classnames('modal-box relative', className)}>
         <form method="dialog">
-          <button className="btn btn-circle btn-ghost btn-sm absolute right-2 top-2">
-            ✕
-          </button>
+          <button className="btn btn-circle btn-ghost btn-sm absolute top-2 right-2">✕</button>
         </form>
         {children}
       </div>
@@ -55,7 +53,7 @@ const Modal = forwardRef<ModalRef, ModalProps>(function Modal(
       </form>
     </dialog>,
     document.getElementById('modal')!
-  );
-});
+  )
+})
 
-export default Modal;
+export default Modal

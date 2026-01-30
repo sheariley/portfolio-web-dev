@@ -1,28 +1,22 @@
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import {
-  faCode,
-  faExternalLink,
-  faFileText
-} from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faCode, faExternalLink, faFileText } from '@fortawesome/free-solid-svg-icons'
 
-import farmHubWebsitePreviewImg from '@/assets/website-screenshots/farm-hub-home-page-screenshot.jpg';
-import Button from '@/components/ui/Button';
-import Card from '@/components/ui/Card';
-import { ExternalLinkUrls } from '@/utils';
+import farmHubWebsitePreviewImg from '@/assets/website-screenshots/farm-hub-home-page-screenshot.jpg'
+import Button from '@/components/ui/Button'
+import Card from '@/components/ui/Card'
+import { ExternalLinkUrls } from '@/utils'
 
 export default function LinksPage() {
   return (
     <>
       <section className="flex flex-col items-stretch gap-8 space-y-12">
         <Card>
-          <Card.Title className="mb-0 flex justify-start">
-            Publicly Accessible Websites
-          </Card.Title>
+          <Card.Title className="mb-0 flex justify-start">Publicly Accessible Websites</Card.Title>
           <Card.Body>
             <div className="flex flex-col items-start">
               <ul className="my-0 list-none space-y-6 pl-0 *:flex *:min-w-45 *:flex-col *:items-start *:pl-0">
                 <li>
-                  <figure className="my-0 flex flex-col items-start not-prose space-y-6">
+                  <figure className="not-prose my-0 flex flex-col items-start space-y-6">
                     <div className="flex flex-col items-stretch space-y-4">
                       <a
                         className="mb-4"
@@ -31,7 +25,7 @@ export default function LinksPage() {
                         href={ExternalLinkUrls.FarmHub}
                       >
                         <img
-                          className="my-0 rounded-lg not-prose aspect-auto max-w-72 drop-shadow-black drop-shadow-md"
+                          className="not-prose my-0 aspect-auto max-w-72 rounded-lg drop-shadow-md drop-shadow-black"
                           src={farmHubWebsitePreviewImg}
                           alt="FarmHub website preview"
                         />
@@ -48,18 +42,15 @@ export default function LinksPage() {
                         FarmHub - Farmers Market Directory
                       </Button>
                     </div>
-                    <figcaption className="self-start text-base text-base-content">
-                      A directory website that lists farmers markets,
-                      farm-stands, and farms by state and city. The website was
-                      built using Next.js, NodeJS, Tailwind, daisyUI, Supabase,
-                      and Leaflet. Data was acquired via Google Maps Places API.
-                      The data was then filtered using automated AI workflows
-                      built in n8n and invoked from NodeJS scripts. The data
-                      filtering workflows integrated various open source LLMs
-                      via a locally running instance of Ollama. Logging was an
-                      important aspect of the data filtering process, as the AI
-                      system prompts had to be tuned to reduce false
-                      positives/negatives.
+                    <figcaption className="text-base-content self-start text-base">
+                      A directory website that lists farmers markets, farm-stands, and farms by
+                      state and city. The website was built using Next.js, NodeJS, Tailwind,
+                      daisyUI, Supabase, and Leaflet. Data was acquired via Google Maps Places API.
+                      The data was then filtered using automated AI workflows built in n8n and
+                      invoked from NodeJS scripts. The data filtering workflows integrated various
+                      open source LLMs via a locally running instance of Ollama. Logging was an
+                      important aspect of the data filtering process, as the AI system prompts had
+                      to be tuned to reduce false positives/negatives.
                     </figcaption>
                   </figure>
                 </li>
@@ -69,11 +60,9 @@ export default function LinksPage() {
         </Card>
 
         <Card>
-          <Card.Title className="mb-0 flex justify-start">
-            Links &amp; Downloads
-          </Card.Title>
+          <Card.Title className="mb-0 flex justify-start">Links &amp; Downloads</Card.Title>
           <Card.Body className="@container">
-            <ul className="flex flex-col items-center my-0 list-none pl-0 *:my-4 *:flex *:w-40 *:pl-0 @lg:flex @lg:flex-row @lg:space-x-4">
+            <ul className="my-0 flex list-none flex-col items-center pl-0 *:my-4 *:flex *:w-40 *:pl-0 @lg:flex @lg:flex-row @lg:space-x-4">
               <li>
                 <Button
                   themeColor="primary"
@@ -130,5 +119,5 @@ export default function LinksPage() {
         </Card>
       </section>
     </>
-  );
+  )
 }

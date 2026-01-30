@@ -1,13 +1,13 @@
-import { type ClassValue, clsx } from 'clsx';
-import { type PropsWithChildren } from 'react';
-import { twMerge } from 'tailwind-merge';
+import { type ClassValue, clsx } from 'clsx'
+import { type PropsWithChildren } from 'react'
+import { twMerge } from 'tailwind-merge'
 
 export interface PropsWithChildrenAndClassName extends PropsWithChildren {
-  className?: string;
+  className?: string
 }
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
+  return twMerge(clsx(inputs))
 }
 
 export type ThemeColor =
@@ -18,4 +18,4 @@ export type ThemeColor =
   | 'info'
   | 'success'
   | 'warning'
-  | 'error';
+  | 'error'

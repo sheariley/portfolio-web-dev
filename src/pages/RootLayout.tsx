@@ -8,31 +8,31 @@ import {
   faHome,
   faLink,
   faSquareCaretLeft
-} from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
-import { Outlet } from 'react-router';
+} from '@fortawesome/free-solid-svg-icons'
+import { useState } from 'react'
+import { Outlet } from 'react-router'
 
-import Button from '@/components/ui/Button';
-import Header from '@/components/ui/Header';
-import NavMenu from '@/components/ui/NavMenu';
-import { ExternalLinkUrls } from '@/utils';
-import { ScrollRestoration } from 'react-router';
+import Button from '@/components/ui/Button'
+import Header from '@/components/ui/Header'
+import NavMenu from '@/components/ui/NavMenu'
+import { ExternalLinkUrls } from '@/utils'
+import { ScrollRestoration } from 'react-router'
 
 export default function RootLayout() {
-  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false)
 
   function handleDrawerClose() {
-    setDrawerOpen(false);
-    document.body.scrollIntoView();
+    setDrawerOpen(false)
+    document.body.scrollIntoView()
   }
 
   function handleDrawerOpen() {
-    setDrawerOpen(true);
+    setDrawerOpen(true)
   }
 
   return (
     <>
-      <ScrollRestoration getKey={(location) => location.pathname} />
+      <ScrollRestoration getKey={location => location.pathname} />
       <div className="drawer lg:drawer-open">
         <input
           id="nav-drawer"
@@ -43,7 +43,7 @@ export default function RootLayout() {
         />
         <div className="drawer-content flex flex-col items-center p-2 pt-4 md:px-6 lg:p-8">
           {!drawerOpen && (
-            <div className="fixed left-0 top-0 z-50 flex w-full justify-start border-b border-base-300 bg-base-100 p-1 lg:hidden">
+            <div className="border-base-300 bg-base-100 fixed top-0 left-0 z-50 flex w-full justify-start border-b p-1 lg:hidden">
               <Button
                 aria-label="open sidebar"
                 widthType="square"
@@ -56,7 +56,7 @@ export default function RootLayout() {
             </div>
           )}
           <Header />
-          <main className="container container-main mx-auto px-4 pb-16 md:px-6 lg:px-8">
+          <main className="container-main container mx-auto px-4 pb-16 md:px-6 lg:px-8">
             <div className="layout-content">
               <Outlet />
             </div>
@@ -69,10 +69,10 @@ export default function RootLayout() {
             className="drawer-overlay lg:hidden"
             onClick={handleDrawerClose}
           ></label>
-          <div className="relative flex min-h-full w-48 flex-col border-r-2 border-base-100/30 bg-base-100 p-1 text-base-content backdrop-blur-xl max-lg:pt-8">
+          <div className="border-base-100/30 bg-base-100 text-base-content relative flex min-h-full w-48 flex-col border-r-2 p-1 backdrop-blur-xl max-lg:pt-8">
             <Button
               aria-label="close sidebar"
-              className="absolute right-2 top-2 lg:hidden"
+              className="absolute top-2 right-2 lg:hidden"
               widthType="square"
               size="sm"
               themeColor="ghost"
@@ -126,5 +126,5 @@ export default function RootLayout() {
         </div>
       </div>
     </>
-  );
+  )
 }

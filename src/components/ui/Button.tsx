@@ -1,6 +1,6 @@
-import { type ThemeColor } from '@/utils';
-import { type IconProp, type SizeProp } from '@fortawesome/fontawesome-svg-core';
-import classnames from 'classnames';
+import { type ThemeColor } from '@/utils'
+import { type IconProp, type SizeProp } from '@fortawesome/fontawesome-svg-core'
+import classnames from 'classnames'
 import {
   Children,
   type ComponentPropsWithRef,
@@ -8,55 +8,46 @@ import {
   type Ref,
   type RefAttributes,
   forwardRef
-} from 'react';
-import { Link } from 'react-router';
-import Icon from './Icon';
-import { twMerge } from 'tailwind-merge';
+} from 'react'
+import { Link } from 'react-router'
+import Icon from './Icon'
+import { twMerge } from 'tailwind-merge'
 
-export type ButtonDisplayType = 'default' | 'link' | 'outline';
+export type ButtonDisplayType = 'default' | 'link' | 'outline'
 
-export type ButtonWidthType = 'default' | 'square' | 'wide' | 'block';
+export type ButtonWidthType = 'default' | 'square' | 'wide' | 'block'
 
-export type ButtonSize = 'default' | 'xs' | 'sm' | 'lg';
+export type ButtonSize = 'default' | 'xs' | 'sm' | 'lg'
 
 type ButtonIconProps = {
-  icon?: IconProp;
-  iconSize?: SizeProp;
-  iconAfterText?: boolean;
-};
+  icon?: IconProp
+  iconSize?: SizeProp
+  iconAfterText?: boolean
+}
 
 type ComponentSpecificProps = {
-  displayType?: ButtonDisplayType;
-  widthType?: ButtonWidthType;
-  themeColor?: 'default' | ThemeColor | 'ghost';
-  active?: boolean;
-  size?: ButtonSize;
-  className?: string | undefined;
-  children?: React.ReactNode | undefined;
-};
+  displayType?: ButtonDisplayType
+  widthType?: ButtonWidthType
+  themeColor?: 'default' | ThemeColor | 'ghost'
+  active?: boolean
+  size?: ButtonSize
+  className?: string | undefined
+  children?: React.ReactNode | undefined
+}
 
-type ButtonSpecificProps = ComponentPropsWithRef<'button'>;
+type ButtonSpecificProps = ComponentPropsWithRef<'button'>
 
-type LinkSpecificProps = ComponentPropsWithRef<typeof Link>;
+type LinkSpecificProps = ComponentPropsWithRef<typeof Link>
 
-type AnchorSpecificProps = ComponentPropsWithRef<'a'>;
+type AnchorSpecificProps = ComponentPropsWithRef<'a'>
 
-export type RegularButtonProps = ComponentSpecificProps
-  & ButtonIconProps
-  & ButtonSpecificProps;
+export type RegularButtonProps = ComponentSpecificProps & ButtonIconProps & ButtonSpecificProps
 
-export type LinkButtonProps = ComponentSpecificProps
-  & ButtonIconProps
-  & LinkSpecificProps;
+export type LinkButtonProps = ComponentSpecificProps & ButtonIconProps & LinkSpecificProps
 
-export type AnchorButtonProps = ComponentSpecificProps
-  & ButtonIconProps
-  & AnchorSpecificProps;
+export type AnchorButtonProps = ComponentSpecificProps & ButtonIconProps & AnchorSpecificProps
 
-export type ButtonComponentProps =
-  | RegularButtonProps
-  | LinkButtonProps
-  | AnchorButtonProps;
+export type ButtonComponentProps = RegularButtonProps | LinkButtonProps | AnchorButtonProps
 
 const Button = forwardRef<
   HTMLAnchorElement | HTMLButtonElement | typeof Link,
@@ -72,16 +63,10 @@ const Button = forwardRef<
     active,
     size,
     className
-  });
+  })
 
   if (isAnchorSpecificProps(props)) {
-    return (
-      <AnchorButton
-        ref={ref as Ref<HTMLAnchorElement>}
-        className={classes}
-        {...props}
-      />
-    );
+    return <AnchorButton ref={ref as Ref<HTMLAnchorElement>} className={classes} {...props} />
   }
 
   if (isLinkSpecificProps(props)) {
@@ -91,7 +76,7 @@ const Button = forwardRef<
         className={classes}
         {...props}
       />
-    );
+    )
   }
 
   return (
@@ -100,90 +85,77 @@ const Button = forwardRef<
       className={classes}
       {...(props as Omit<ButtonSpecificProps, 'ref' | 'className'>)}
     />
-  );
-});
+  )
+})
 
-export default Button;
+export default Button
 
-const RegularButton = forwardRef<
-  HTMLButtonElement,
-  ButtonSpecificProps & ButtonIconProps
->(function renderRegularButton(
-  {
-    children,
-    icon,
-    iconSize,
-    iconAfterText,
-    ...props
-  }: ButtonSpecificProps & ButtonIconProps,
-  ref
-) {
-  return (
-    <button ref={ref as Ref<HTMLButtonElement>} {...props}>
-      <ButtonChildrenWrapper
-        icon={icon}
-        iconSize={iconSize}
-        iconAfterText={iconAfterText}
+const RegularButton = forwardRef<HTMLButtonElement, ButtonSpecificProps & ButtonIconProps>(
+  function renderRegularButton(
+    { children, icon, iconSize, iconAfterText, ...props }: ButtonSpecificProps & ButtonIconProps,
+    ref
+  ) {
+    return (
+      <button ref={ref as Ref<HTMLButtonElement>} {...props}>
+        <ButtonChildrenWrapper icon={icon} iconSize={iconSize} iconAfterText={iconAfterText}>
+          {children}
+        </ButtonChildrenWrapper>
+      </button>
+    )
+  }
+)
+
+const AnchorButton = forwardRef<HTMLAnchorElement, AnchorSpecificProps & ButtonIconProps>(
+  function renderAnchorButton(
+    {
+      children,
+      icon,
+      iconSize,
+      iconAfterText,
+      className,
+      ...props
+    }: AnchorSpecificProps & ButtonIconProps,
+    ref
+  ) {
+    return (
+      <a
+        ref={ref as RefAttributes<HTMLAnchorElement>['ref']}
+        {...props}
+        className={twMerge('no-underline', className)}
       >
-        {children}
-      </ButtonChildrenWrapper>
-    </button>
-  );
-});
+        <ButtonChildrenWrapper icon={icon} iconSize={iconSize} iconAfterText={iconAfterText}>
+          {children}
+        </ButtonChildrenWrapper>
+      </a>
+    )
+  }
+)
 
-const AnchorButton = forwardRef<
-  HTMLAnchorElement,
-  AnchorSpecificProps & ButtonIconProps
->(function renderAnchorButton(
-  {
-    children,
-    icon,
-    iconSize,
-    iconAfterText,
-    className,
-    ...props
-  }: AnchorSpecificProps & ButtonIconProps,
-  ref
-) {
-  return (
-    <a ref={ref as RefAttributes<HTMLAnchorElement>['ref']} {...props} className={twMerge('no-underline', className)}>
-      <ButtonChildrenWrapper
-        icon={icon}
-        iconSize={iconSize}
-        iconAfterText={iconAfterText}
+const LinkButton = forwardRef<HTMLAnchorElement | typeof Link, LinkSpecificProps & ButtonIconProps>(
+  function renderLinkButton(
+    {
+      children,
+      icon,
+      iconSize,
+      iconAfterText,
+      className,
+      ...props
+    }: LinkSpecificProps & ButtonIconProps,
+    ref
+  ) {
+    return (
+      <Link
+        ref={ref as RefAttributes<HTMLAnchorElement>['ref']}
+        {...props}
+        className={twMerge('no-underline', className)}
       >
-        {children}
-      </ButtonChildrenWrapper>
-    </a>
-  );
-});
-
-const LinkButton = forwardRef<
-  HTMLAnchorElement | typeof Link,
-  LinkSpecificProps & ButtonIconProps
->(function renderLinkButton(
-  {
-    children,
-    icon,
-    iconSize,
-    iconAfterText,
-    className,
-    ...props
-  }: LinkSpecificProps & ButtonIconProps,
-  ref
-) {
-  return (
-    <Link ref={ref as RefAttributes<HTMLAnchorElement>['ref']} {...props} className={twMerge('no-underline', className)}>
-      <ButtonChildrenWrapper
-        icon={icon}
-        iconSize={iconSize}
-        iconAfterText={iconAfterText}
-      >
-        {children}
-      </ButtonChildrenWrapper>
-    </Link>
-  );
-});
+        <ButtonChildrenWrapper icon={icon} iconSize={iconSize} iconAfterText={iconAfterText}>
+          {children}
+        </ButtonChildrenWrapper>
+      </Link>
+    )
+  }
+)
 
 function ButtonChildrenWrapper({
   iconAfterText,
@@ -200,7 +172,7 @@ function ButtonChildrenWrapper({
       )}
       {!!iconAfterText && <ButtonIconWrapper {...props} />}
     </>
-  );
+  )
 }
 
 function ButtonIconWrapper({ icon, iconSize }: ButtonIconProps) {
@@ -210,19 +182,15 @@ function ButtonIconWrapper({ icon, iconSize }: ButtonIconProps) {
         <Icon icon={icon} size={iconSize} />
       </span>
     )
-  );
+  )
 }
 
-function isAnchorSpecificProps(
-  props: ButtonComponentProps
-): props is AnchorSpecificProps {
-  return typeof props === 'object' && 'href' in props;
+function isAnchorSpecificProps(props: ButtonComponentProps): props is AnchorSpecificProps {
+  return typeof props === 'object' && 'href' in props
 }
 
-function isLinkSpecificProps(
-  props: ButtonComponentProps
-): props is LinkSpecificProps {
-  return typeof props === 'object' && 'to' in props;
+function isLinkSpecificProps(props: ButtonComponentProps): props is LinkSpecificProps {
+  return typeof props === 'object' && 'to' in props
 }
 
 function getClassNameFromProps({
@@ -237,15 +205,11 @@ function getClassNameFromProps({
     'not-[has-[&_.btn-wrapped-content]]:gap-x-0 btn inline-flex flex-row place-items-center content-center leading-none',
     size && size !== 'default' && ButtonSizeClasses[size],
     active && 'btn-active',
-    displayType
-      && displayType !== 'default'
-      && ButtonDisplayTypeClasses[displayType],
+    displayType && displayType !== 'default' && ButtonDisplayTypeClasses[displayType],
     widthType && widthType !== 'default' && ButtonWidthTypeClasses[widthType],
-    themeColor
-      && themeColor !== 'default'
-      && ButtonThemeColorClasses[themeColor],
+    themeColor && themeColor !== 'default' && ButtonThemeColorClasses[themeColor],
     className
-  );
+  )
 }
 
 // These class mappings are required because TailwindCSS does not support dynamic class names in a straightforward way.
@@ -263,24 +227,24 @@ const ButtonThemeColorClasses = {
   warning: 'btn-warning',
   error: 'btn-error',
   ghost: 'btn-ghost'
-};
+}
 
 const ButtonDisplayTypeClasses = {
   default: '', // Default size, no class needed
   link: 'btn-link',
   outline: 'btn-outline'
-};
+}
 
 const ButtonWidthTypeClasses = {
   default: '', // Default size, no class needed
   square: 'btn-square',
   wide: 'btn-wide',
   block: 'btn-block'
-};
+}
 
 const ButtonSizeClasses = {
   default: '', // Default size, no class needed
   xs: 'btn-xs',
   sm: 'btn-sm',
   lg: 'btn-lg'
-};
+}

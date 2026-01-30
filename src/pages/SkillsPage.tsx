@@ -1,5 +1,5 @@
-import Card from '@/components/ui/Card';
-import PageHeader from '@/components/ui/PageHeader';
+import Card from '@/components/ui/Card'
+import PageHeader from '@/components/ui/PageHeader'
 import {
   faAngular,
   faBootstrap,
@@ -18,15 +18,15 @@ import {
   faSlack,
   faVuejs,
   faWindows
-} from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+} from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function SkillsPage() {
   return (
     <>
       <PageHeader>Skills</PageHeader>
       <br />
-      <section className="gap-8 space-y-12 lg:block lg:columns-2 max-lg:flex max-lg:w-full max-lg:flex-col max-lg:items-stretch">
+      <section className="gap-8 space-y-12 max-lg:flex max-lg:w-full max-lg:flex-col max-lg:items-stretch lg:block lg:columns-2">
         <Card>
           <Card.Title>Patterns &amp; Practices</Card.Title>
           <Card.Body>
@@ -258,5 +258,5 @@ export default function SkillsPage() {
         </Card>
       </section>
     </>
-  );
+  )
 }

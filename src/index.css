@@ -1,16 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-@import "tailwindcss";
+@import 'tailwindcss';
 @import './theme.css';
 
-@plugin "@tailwindcss/typography";
-@plugin "daisyui" {
+@plugin '@tailwindcss/typography';
+@plugin 'daisyui' {
   themes: corporate --default;
   exclude: rootscrollgutter;
-};
+}
 
 @theme {
-  --font-sans: "Roboto Flex", "Roboto", "ui-sans-serif", "system-ui", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans:
+    'Roboto Flex', 'Roboto', 'ui-sans-serif', 'system-ui', 'sans-serif', 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 @layer base {
@@ -22,24 +24,27 @@
     @apply md:overflow-hidden;
   }
 
-  :root, body, .container-main {
+  :root,
+  body,
+  .container-main {
     @apply flex flex-col items-stretch;
   }
 
   body {
-    @apply antialiased p-0 bg-base-200 text-base-content;
+    @apply bg-base-200 text-base-content p-0 antialiased;
   }
 
   #root {
-    @apply flex flex-col items-center mx-0;
+    @apply mx-0 flex flex-col items-center;
   }
 
   :root:has(*:is(.layout-full)) {
-    @apply justify-items-stretch items-stretch h-full;
+    @apply h-full items-stretch justify-items-stretch;
   }
 
-  body:has(*:is(.layout-full)), body:has(*:is(.layout-full)) > #root {
-    @apply justify-items-stretch items-stretch basis-full;
+  body:has(*:is(.layout-full)),
+  body:has(*:is(.layout-full)) > #root {
+    @apply basis-full items-stretch justify-items-stretch;
   }
 
   body:has(*:is(.layout-full)) > header:first {
@@ -47,7 +52,7 @@
   }
 
   body:has(*:is(.layout-full)) > .container-main {
-    @apply basis-full justify-items-stretch items-stretch;
+    @apply basis-full items-stretch justify-items-stretch;
   }
 
   body:has(*:is(.layout-full)) > .container-main > :has(~ .layout-content) {
@@ -95,7 +100,9 @@
 }
 
 .modal {
-  &.modal-open, &[open], &:target {
+  &.modal-open,
+  &[open],
+  &:target {
     @apply bg-black/75;
   }
 }

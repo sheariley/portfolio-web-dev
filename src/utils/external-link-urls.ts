@@ -5,4 +5,4 @@ enum ExternalLinkUrls {
   FarmHub = 'https://farm-hub.net'
 }
 
-export default ExternalLinkUrls;
+export default ExternalLinkUrls

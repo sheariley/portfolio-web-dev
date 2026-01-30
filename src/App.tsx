@@ -1,14 +1,14 @@
-import { RouterProvider, createBrowserRouter } from 'react-router';
+import { RouterProvider, createBrowserRouter } from 'react-router'
 
-import SkillsPage from '@/pages/SkillsPage';
-import CertificationsPage from '@/pages/CertificationsPage';
-import ExperiencePage from '@/pages/ExperiencePage';
-import HomePage from '@/pages/HomePage';
-import RootLayout from '@/pages/RootLayout';
-import LinksPage from './pages/LinksPage';
-import NotFoundPage from './pages/NotFoundPage';
-import RedirectPage from './pages/RedirectPage';
-import { ExternalLinkUrls } from './utils';
+import SkillsPage from '@/pages/SkillsPage'
+import CertificationsPage from '@/pages/CertificationsPage'
+import ExperiencePage from '@/pages/ExperiencePage'
+import HomePage from '@/pages/HomePage'
+import RootLayout from '@/pages/RootLayout'
+import LinksPage from './pages/LinksPage'
+import NotFoundPage from './pages/NotFoundPage'
+import RedirectPage from './pages/RedirectPage'
+import { ExternalLinkUrls } from './utils'
 
 const router = createBrowserRouter([
   {
@@ -59,10 +59,10 @@ const router = createBrowserRouter([
       to: ExternalLinkUrls.Source
     }
   }
-]);
+])
 
 function App() {
-  return <RouterProvider router={router} />;
+  return <RouterProvider router={router} />
 }
 
-export default App;
+export default App
