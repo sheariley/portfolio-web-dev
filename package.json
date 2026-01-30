@@ -14,8 +14,6 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",
-    "test": "vitest",
-    "test:ui": "vitest --ui",
     "lint": "eslint src --max-warnings=0",
     "typecheck": "tsc --project tsconfig.json --noEmit"
   },
@@ -25,7 +23,6 @@
     "@fortawesome/free-regular-svg-icons": "^7.1.0",
     "@fortawesome/free-solid-svg-icons": "^7.1.0",
     "@fortawesome/react-fontawesome": "^3.1.1",
-    "axios": "^1.7.2",
     "classnames": "^2.5.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.26",
