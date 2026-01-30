@@ -22,32 +22,32 @@ export default function LinksPage() {
             <div className="flex flex-col items-start">
               <ul className="my-0 list-none space-y-6 pl-0 *:flex *:min-w-45 *:flex-col *:items-start *:pl-0">
                 <li>
-                  <figure className="my-0 flex flex-col items-start">
-                    <a
-                      className="mb-4 self-start"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={ExternalLinkUrls.FarmHub}
-                    >
-                      <img
-                        className="my-0 rounded-lg not-prose"
-                        width="240px"
-                        height="180px"
-                        src={farmHubWebsitePreviewImg}
-                        alt="FarmHub website preview"
-                      />
-                    </a>
-                    <Button
-                      themeColor="primary"
-                      href={ExternalLinkUrls.FarmHub}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      icon={faExternalLink}
-                      size="sm"
-                      className="justify-start self-start"
-                    >
-                      FarmHub - Farmers Market Directory
-                    </Button>
+                  <figure className="my-0 flex flex-col items-start not-prose space-y-6">
+                    <div className="flex flex-col items-stretch space-y-4">
+                      <a
+                        className="mb-4"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={ExternalLinkUrls.FarmHub}
+                      >
+                        <img
+                          className="my-0 rounded-lg not-prose aspect-auto max-w-72 drop-shadow-black drop-shadow-md"
+                          src={farmHubWebsitePreviewImg}
+                          alt="FarmHub website preview"
+                        />
+                      </a>
+                      <Button
+                        themeColor="primary"
+                        href={ExternalLinkUrls.FarmHub}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        icon={faExternalLink}
+                        size="sm"
+                        className="justify-start"
+                      >
+                        FarmHub - Farmers Market Directory
+                      </Button>
+                    </div>
                     <figcaption className="self-start text-base text-base-content">
                       A directory website that lists farmers markets,
                       farm-stands, and farms by state and city. The website was

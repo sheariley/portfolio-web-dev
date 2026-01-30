@@ -7,7 +7,7 @@ export default function ExperiencePage() {
       <PageHeader>
         Work Experience
         <br />
-        (in reverse chronological order)
+        <div className="text-base">(in reverse chronological order)</div>
       </PageHeader>
       <br />
       <section className="flex flex-col items-center gap-8 space-y-12">
