@@ -1,13 +1,10 @@
 'use client'
 
-import classnames from 'classnames'
-import {
+import { cn } from '@/lib/utils'
+import React, {
   type ComponentPropsWithoutRef,
   type PropsWithChildren,
-  type ReactEventHandler,
-  forwardRef,
-  useImperativeHandle,
-  useRef
+  type ReactEventHandler
 } from 'react'
 import { createPortal } from 'react-dom'
 
@@ -22,13 +19,14 @@ type ModalProps = PropsWithChildren
     containerClassNames?: string
   }
 
-const Modal = forwardRef<ModalRef, ModalProps>(function Modal(
+const Modal = React.forwardRef<ModalRef, ModalProps>(function Modal(
   { onClose, children, className, containerClassNames, ...rest },
   ref
 ) {
-  const dialogRef = useRef<HTMLDialogElement>(null)
+  const [mounted, setMounted] = React.useState(false)
+  const dialogRef = React.useRef<HTMLDialogElement>(null)
 
-  useImperativeHandle(ref, () => ({
+  React.useImperativeHandle(ref, () => ({
     open() {
       dialogRef.current?.showModal()
     },
@@ -37,24 +35,31 @@ const Modal = forwardRef<ModalRef, ModalProps>(function Modal(
     }
   }))
 
-  return createPortal(
-    <dialog
-      className={classnames('modal', containerClassNames)}
-      ref={dialogRef}
-      onClose={onClose}
-      {...rest}
-    >
-      <div className={classnames('modal-box relative', className)}>
-        <form method="dialog">
-          <button className="btn btn-circle btn-ghost btn-sm absolute top-2 right-2">✕</button>
+  React.useEffect(() => {
+    if (!mounted) setMounted(true)
+  }, [mounted])
+
+  return (
+    mounted
+    && createPortal(
+      <dialog
+        className={cn('modal', containerClassNames)}
+        ref={dialogRef}
+        onClose={onClose}
+        {...rest}
+      >
+        <div className={cn('modal-box relative', className)}>
+          <form method="dialog">
+            <button className="btn btn-circle btn-ghost btn-sm absolute top-2 right-2">✕</button>
+          </form>
+          {children}
+        </div>
+        <form method="dialog" className="modal-backdrop">
+          <button>close</button>
         </form>
-        {children}
-      </div>
-      <form method="dialog" className="modal-backdrop">
-        <button>close</button>
-      </form>
-    </dialog>,
-    document.getElementById('modal-container')!
+      </dialog>,
+      document.getElementById('modal-container')!
+    )
   )
 })
 
