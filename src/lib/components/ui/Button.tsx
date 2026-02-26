@@ -1,17 +1,16 @@
-import { type ThemeColor } from '@/lib/utils'
-import { type IconProp, type SizeProp } from '@fortawesome/fontawesome-svg-core'
-import classnames from 'classnames'
+import { IconProp, SizeProp } from '@fortawesome/fontawesome-svg-core'
+import Link from 'next/link'
 import {
   Children,
-  type ComponentPropsWithRef,
-  type PropsWithChildren,
-  type Ref,
-  type RefAttributes,
+  ComponentPropsWithRef,
+  PropsWithChildren,
+  Ref,
+  RefAttributes,
   forwardRef
 } from 'react'
-import Link from 'next/link'
+
+import { cn, type ThemeColor } from '@/lib/utils'
 import Icon from './Icon'
-import { twMerge } from 'tailwind-merge'
 
 export type ButtonDisplayType = 'default' | 'link' | 'outline'
 
@@ -39,15 +38,11 @@ type ButtonSpecificProps = ComponentPropsWithRef<'button'>
 
 type LinkSpecificProps = ComponentPropsWithRef<typeof Link>
 
-type AnchorSpecificProps = ComponentPropsWithRef<'a'>
-
 export type RegularButtonProps = ComponentSpecificProps & ButtonIconProps & ButtonSpecificProps
 
 export type LinkButtonProps = ComponentSpecificProps & ButtonIconProps & LinkSpecificProps
 
-export type AnchorButtonProps = ComponentSpecificProps & ButtonIconProps & AnchorSpecificProps
-
-export type ButtonComponentProps = RegularButtonProps | LinkButtonProps | AnchorButtonProps
+export type ButtonComponentProps = RegularButtonProps | LinkButtonProps
 
 const Button = forwardRef<
   HTMLAnchorElement | HTMLButtonElement | typeof Link,
@@ -64,10 +59,6 @@ const Button = forwardRef<
     size,
     className
   })
-
-  if (isAnchorSpecificProps(props)) {
-    return <AnchorButton ref={ref as Ref<HTMLAnchorElement>} className={classes} {...props} />
-  }
 
   if (isLinkSpecificProps(props)) {
     return (
@@ -105,50 +96,13 @@ const RegularButton = forwardRef<HTMLButtonElement, ButtonSpecificProps & Button
   }
 )
 
-const AnchorButton = forwardRef<HTMLAnchorElement, AnchorSpecificProps & ButtonIconProps>(
-  function renderAnchorButton(
-    {
-      children,
-      icon,
-      iconSize,
-      iconAfterText,
-      className,
-      ...props
-    }: AnchorSpecificProps & ButtonIconProps,
-    ref
-  ) {
-    return (
-      <a
-        ref={ref as RefAttributes<HTMLAnchorElement>['ref']}
-        {...props}
-        className={twMerge('no-underline', className)}
-      >
-        <ButtonChildrenWrapper icon={icon} iconSize={iconSize} iconAfterText={iconAfterText}>
-          {children}
-        </ButtonChildrenWrapper>
-      </a>
-    )
-  }
-)
-
 const LinkButton = forwardRef<HTMLAnchorElement | typeof Link, LinkSpecificProps & ButtonIconProps>(
   function renderLinkButton(
-    {
-      children,
-      icon,
-      iconSize,
-      iconAfterText,
-      className,
-      ...props
-    }: LinkSpecificProps & ButtonIconProps,
+    { children, icon, iconSize, iconAfterText, ...props }: LinkSpecificProps & ButtonIconProps,
     ref
   ) {
     return (
-      <Link
-        ref={ref as RefAttributes<HTMLAnchorElement>['ref']}
-        {...props}
-        className={twMerge('no-underline', className)}
-      >
+      <Link ref={ref as RefAttributes<HTMLAnchorElement>['ref']} {...props}>
         <ButtonChildrenWrapper icon={icon} iconSize={iconSize} iconAfterText={iconAfterText}>
           {children}
         </ButtonChildrenWrapper>
@@ -178,19 +132,15 @@ function ButtonChildrenWrapper({
 function ButtonIconWrapper({ icon, iconSize }: ButtonIconProps) {
   return (
     !!icon && (
-      <span className="inline-flex min-w-5 place-items-center justify-center">
+      <span className="inline-flex min-w-5 items-center justify-center justify-items-center">
         <Icon icon={icon} size={iconSize} />
       </span>
     )
   )
 }
 
-function isAnchorSpecificProps(props: ButtonComponentProps): props is AnchorSpecificProps {
-  return typeof props === 'object' && 'href' in props
-}
-
 function isLinkSpecificProps(props: ButtonComponentProps): props is LinkSpecificProps {
-  return typeof props === 'object' && 'to' in props
+  return typeof props === 'object' && 'href' in props
 }
 
 function getClassNameFromProps({
@@ -201,8 +151,8 @@ function getClassNameFromProps({
   size,
   className
 }: ComponentSpecificProps) {
-  return classnames(
-    'btn inline-flex flex-row place-items-center content-center leading-none',
+  return cn(
+    'btn inline-flex flex-row items-center content-center justify-items-center leading-tight',
     size && size !== 'default' && ButtonSizeClasses[size],
     active && 'btn-active',
     displayType && displayType !== 'default' && ButtonDisplayTypeClasses[displayType],

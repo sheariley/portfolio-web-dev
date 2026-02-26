@@ -1,7 +1,10 @@
 import { type IconDefinition } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { type MouseEvent } from 'react'
-import { NavLink } from 'react-router'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import React, { type MouseEvent } from 'react'
+
+import { cn } from '@/lib/utils'
 
 type NavMenuItemBase = {
   label: string
@@ -36,6 +39,25 @@ function NavMenuItemIcon({ icon }: { icon: IconDefinition }) {
       <FontAwesomeIcon icon={icon} />
     </span>
   )
+}
+
+type NavLinkProps = Omit<React.ComponentProps<typeof Link>, 'href'> & {
+  to: string
+}
+
+function NavLink({ to, children, className, ...props }: NavLinkProps) {
+  const pathname = usePathname()
+  const isActive = pathname === to || (to !== '/' && pathname.startsWith(to));
+
+  return (
+    <Link
+      href={to}
+      className={cn(isActive ? 'text-primary font-semibold' : 'text-base-content', className)}
+      {...props}
+    >
+      {children}
+    </Link>
+  );
 }
 
 export default function NavMenu({ menuItems, onItemClick }: NavMenuProps) {
