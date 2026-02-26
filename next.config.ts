@@ -1,8 +1,22 @@
 import type { NextConfig } from 'next'
+import { PHASE_DEVELOPMENT_SERVER } from 'next/dist/shared/lib/constants'
 
 const nextConfig: NextConfig = {
-  output: 'export', // Outputs a Single-Page Application (SPA)
-  distDir: 'build', // Changes the build output directory to `build`
+  productionBrowserSourceMaps: false,
+  poweredByHeader: false
 }
 
-export default nextConfig
+const IsPreviewEnv = process.env.PREVIEW_ENV === 'true'
+
+function createConfig(phase: string, { defaultConfig }: { defaultConfig: NextConfig }): NextConfig {
+  return {
+    ...defaultConfig,
+    ...nextConfig,
+    productionBrowserSourceMaps: IsPreviewEnv,
+    experimental: {
+      serverSourceMaps: phase === PHASE_DEVELOPMENT_SERVER
+    }
+  }
+}
+
+export default createConfig
