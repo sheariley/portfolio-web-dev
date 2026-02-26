@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 @import 'tailwindcss';
-@import './theme.css';
 
 @plugin '@tailwindcss/typography';
 @plugin 'daisyui' {
   themes: corporate --default;
   exclude: rootscrollgutter;
 }
+
+@import './theme.css';
 
 @theme {
   --font-sans:
@@ -47,7 +48,7 @@
     @apply basis-full items-stretch justify-items-stretch;
   }
 
-  body:has(*:is(.layout-full)) > header:first {
+  body:has(*:is(.layout-full)) > header:first-of-type {
     @apply justify-self-start;
   }
 

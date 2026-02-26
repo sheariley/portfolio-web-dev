@@ -6,9 +6,9 @@ import {
   faExternalLink
 } from '@fortawesome/free-solid-svg-icons'
 
-import Button from '@/components/ui/Button'
-import Card from '@/components/ui/Card'
-import { ExternalLinkUrls } from '@/utils'
+import Button from '@/lib/components/ui/Button'
+import Card from '@/lib/components/ui/Card'
+import { ExternalLinkUrls } from '@/lib/utils'
 
 export default function HomePage() {
   return (

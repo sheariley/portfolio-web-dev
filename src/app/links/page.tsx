@@ -1,10 +1,9 @@
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faCode, faExternalLink, faFileText } from '@fortawesome/free-solid-svg-icons'
 
-import farmHubWebsitePreviewImg from '@/assets/website-screenshots/farm-hub-home-page-screenshot.jpg'
-import Button from '@/components/ui/Button'
-import Card from '@/components/ui/Card'
-import { ExternalLinkUrls } from '@/utils'
+import Button from '@/lib/components/ui/Button'
+import Card from '@/lib/components/ui/Card'
+import { ExternalLinkUrls } from '@/lib/utils'
 
 export default function LinksPage() {
   return (
@@ -26,7 +25,7 @@ export default function LinksPage() {
                       >
                         <img
                           className="not-prose my-0 aspect-auto max-w-72 rounded-lg drop-shadow-md drop-shadow-black"
-                          src={farmHubWebsitePreviewImg}
+                          src="/assets/website-screenshots/farm-hub-home-page-screenshot.jpg"
                           alt="FarmHub website preview"
                         />
                       </a>

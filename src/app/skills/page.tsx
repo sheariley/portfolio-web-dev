@@ -1,5 +1,3 @@
-import Card from '@/components/ui/Card'
-import PageHeader from '@/components/ui/PageHeader'
 import {
   faAngular,
   faBootstrap,
@@ -20,6 +18,9 @@ import {
   faWindows
 } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import Card from '@/lib/components/ui/Card'
+import PageHeader from '@/lib/components/ui/PageHeader'
 
 export default function SkillsPage() {
   return (

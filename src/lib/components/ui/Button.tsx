@@ -1,4 +1,4 @@
-import { type ThemeColor } from '@/utils'
+import { type ThemeColor } from '@/lib/utils'
 import { type IconProp, type SizeProp } from '@fortawesome/fontawesome-svg-core'
 import classnames from 'classnames'
 import {
@@ -9,7 +9,7 @@ import {
   type RefAttributes,
   forwardRef
 } from 'react'
-import { Link } from 'react-router'
+import Link from 'next/link'
 import Icon from './Icon'
 import { twMerge } from 'tailwind-merge'
 
@@ -202,7 +202,7 @@ function getClassNameFromProps({
   className
 }: ComponentSpecificProps) {
   return classnames(
-    'not-[has-[&_.btn-wrapped-content]]:gap-x-0 btn inline-flex flex-row place-items-center content-center leading-none',
+    'btn inline-flex flex-row place-items-center content-center leading-none',
     size && size !== 'default' && ButtonSizeClasses[size],
     active && 'btn-active',
     displayType && displayType !== 'default' && ButtonDisplayTypeClasses[displayType],
