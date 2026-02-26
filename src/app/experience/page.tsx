@@ -1,7 +1,7 @@
 import Card from '@/lib/components/ui/Card'
 import PageHeader from '@/lib/components/ui/PageHeader'
 
-export default function ExperiencePage() {
+export default async function ExperiencePage() {
   return (
     <>
       <PageHeader>

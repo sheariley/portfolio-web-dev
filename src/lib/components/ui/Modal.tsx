@@ -1,3 +1,5 @@
+'use client'
+
 import classnames from 'classnames'
 import {
   type ComponentPropsWithoutRef,
@@ -52,7 +54,7 @@ const Modal = forwardRef<ModalRef, ModalProps>(function Modal(
         <button>close</button>
       </form>
     </dialog>,
-    document.getElementById('modal')!
+    document.getElementById('modal-container')!
   )
 })
 

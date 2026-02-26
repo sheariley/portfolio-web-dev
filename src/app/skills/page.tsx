@@ -22,7 +22,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Card from '@/lib/components/ui/Card'
 import PageHeader from '@/lib/components/ui/PageHeader'
 
-export default function SkillsPage() {
+export default async function SkillsPage() {
   return (
     <>
       <PageHeader>Skills</PageHeader>

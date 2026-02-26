@@ -5,7 +5,7 @@ import Button from '@/lib/components/ui/Button'
 import Card from '@/lib/components/ui/Card'
 import { ExternalLinkUrls } from '@/lib/utils'
 
-export default function LinksPage() {
+export default async function LinksPage() {
   return (
     <>
       <section className="flex flex-col items-stretch gap-8 space-y-12">
@@ -25,7 +25,7 @@ export default function LinksPage() {
                       >
                         <img
                           className="not-prose my-0 aspect-auto max-w-72 rounded-lg drop-shadow-md drop-shadow-black"
-                          src="/assets/website-screenshots/farm-hub-home-page-screenshot.jpg"
+                          src="/website-screenshots/farm-hub-home-page-screenshot.jpg"
                           alt="FarmHub website preview"
                         />
                       </a>

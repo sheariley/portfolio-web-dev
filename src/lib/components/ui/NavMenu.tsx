@@ -47,7 +47,7 @@ type NavLinkProps = Omit<React.ComponentProps<typeof Link>, 'href'> & {
 
 function NavLink({ to, children, className, ...props }: NavLinkProps) {
   const pathname = usePathname()
-  const isActive = pathname === to || (to !== '/' && pathname.startsWith(to));
+  const isActive = pathname === to || (to !== '/' && pathname.startsWith(to))
 
   return (
     <Link
@@ -57,7 +57,7 @@ function NavLink({ to, children, className, ...props }: NavLinkProps) {
     >
       {children}
     </Link>
-  );
+  )
 }
 
 export default function NavMenu({ menuItems, onItemClick }: NavMenuProps) {

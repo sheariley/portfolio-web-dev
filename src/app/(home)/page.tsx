@@ -10,7 +10,7 @@ import Button from '@/lib/components/ui/Button'
 import Card from '@/lib/components/ui/Card'
 import { ExternalLinkUrls } from '@/lib/utils'
 
-export default function HomePage() {
+export default async function HomePage() {
   return (
     <section className="flex flex-col items-center space-y-6 pb-5 md:space-y-12 lg:pb-0">
       <Card className="w-full">
@@ -54,7 +54,7 @@ export default function HomePage() {
             <li>
               <Button
                 themeColor="primary"
-                to="/skills"
+                href="/skills"
                 icon={faBook}
                 size="sm"
                 className="w-full justify-start whitespace-nowrap"
@@ -65,7 +65,7 @@ export default function HomePage() {
             <li>
               <Button
                 themeColor="primary"
-                to="/experience"
+                href="/experience"
                 icon={faBusinessTime}
                 size="sm"
                 className="w-full justify-start whitespace-nowrap"
@@ -76,7 +76,7 @@ export default function HomePage() {
             <li>
               <Button
                 themeColor="primary"
-                to="/links"
+                href="/links"
                 icon={faExternalLink}
                 size="sm"
                 className="w-full justify-start whitespace-nowrap"
@@ -210,7 +210,7 @@ export default function HomePage() {
 
           <p className="max-lg:my-1">
             The rest is history and you can read more about it in{' '}
-            <Button to="/experience" themeColor="primary" icon={faBusinessTime} size="sm">
+            <Button href="/experience" themeColor="primary" icon={faBusinessTime} size="sm">
               Experience
             </Button>
           </p>
