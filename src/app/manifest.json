@@ -1,0 +1,19 @@
+{
+  "name": "shea-riley.com",
+  "short_name": "shea-riley.com",
+  "description": "Shea Riley's Software Engineering Portfolio Website",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#E8E8E8",
+  "theme_color": "#0082CE",
+  "categories": [
+    "business"
+  ],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "48x48",
+      "type": "image/svg+xml"
+    }
+  ]
+}

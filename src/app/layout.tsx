@@ -6,7 +6,8 @@ import NavDrawerContainer from '@/lib/components/ui/NavDrawerContainer'
 
 export const metadata: Metadata = {
   title: 'Shea Riley - Full-Stack Software Engineer and Architect',
-  description: "Shea Riley's Software Engineering Portfolio Website"
+  description: "Shea Riley's Software Engineering Portfolio Website",
+  icons: '/favicon.svg'
 }
 
 export const viewport: Viewport = {
