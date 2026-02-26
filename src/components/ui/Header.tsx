@@ -24,7 +24,7 @@ export default function Header({ className }: { className?: string }) {
           'text-primary-content'
         )}
       >
-        Software Engineer and Front-end Architect
+        Full-Stack Software Engineer and Front-end Architect
       </div>
     </header>
   )
