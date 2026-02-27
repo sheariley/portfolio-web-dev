@@ -15,12 +15,13 @@ export type ModalRef = {
 
 type ModalProps = PropsWithChildren
   & ComponentPropsWithoutRef<'dialog'> & {
+    containerId?: string
     onClose?: ReactEventHandler<HTMLDialogElement>
     containerClassNames?: string
   }
 
 const Modal = React.forwardRef<ModalRef, ModalProps>(function Modal(
-  { onClose, children, className, containerClassNames, ...rest },
+  { containerId = 'modal-container', onClose, children, className, containerClassNames, ...props },
   ref
 ) {
   const [mounted, setMounted] = React.useState(false)
@@ -46,7 +47,7 @@ const Modal = React.forwardRef<ModalRef, ModalProps>(function Modal(
         className={cn('modal', containerClassNames)}
         ref={dialogRef}
         onClose={onClose}
-        {...rest}
+        {...props}
       >
         <div className={cn('modal-box relative', className)}>
           <form method="dialog">
@@ -58,7 +59,7 @@ const Modal = React.forwardRef<ModalRef, ModalProps>(function Modal(
           <button>close</button>
         </form>
       </dialog>,
-      document.getElementById('modal-container')!
+      document.getElementById(containerId)!
     )
   )
 })
