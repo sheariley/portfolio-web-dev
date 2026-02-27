@@ -1,48 +1,23 @@
-import { type IconDefinition } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import React, { type MouseEvent } from 'react'
+import React from 'react'
 
 import { cn } from '@/lib/utils'
+import {
+  isNavMenuLinkItem,
+  NavLinkProps,
+  NavMenuItem,
+  NavMenuItemIconProps,
+  NavMenuProps
+} from './types/nav-menu-types'
 
-type NavMenuItemBase = {
-  label: string
-  icon: IconDefinition
-  onClick?(event: MouseEvent<HTMLAnchorElement>): void
-}
-
-type NavMenuRouteItem = NavMenuItemBase & {
-  path: string
-}
-
-type NavMenuLinkItem = NavMenuItemBase & {
-  href: string
-  target?: string
-  download?: boolean
-}
-
-type NavMenuItem = NavMenuRouteItem | NavMenuLinkItem
-
-type NavMenuProps = {
-  menuItems: NavMenuItem[]
-  onItemClick?(event: MouseEvent<HTMLAnchorElement>): void
-}
-
-function isNavMenuLinkItem(item: NavMenuItem): item is NavMenuLinkItem {
-  return 'href' in item
-}
-
-function NavMenuItemIcon({ icon }: { icon: IconDefinition }) {
+function NavMenuItemIcon({ icon }: NavMenuItemIconProps) {
   return (
     <span className="min-w-5 text-center">
       <FontAwesomeIcon icon={icon} />
     </span>
   )
-}
-
-type NavLinkProps = Omit<React.ComponentProps<typeof Link>, 'href'> & {
-  to: string
 }
 
 function NavLink({ to, children, className, ...props }: NavLinkProps) {
@@ -61,7 +36,7 @@ function NavLink({ to, children, className, ...props }: NavLinkProps) {
 }
 
 export default function NavMenu({ menuItems, onItemClick }: NavMenuProps) {
-  function handleItemClick(item: NavMenuItem, event: MouseEvent<HTMLAnchorElement>) {
+  function handleItemClick(item: NavMenuItem, event: React.MouseEvent<HTMLAnchorElement>) {
     if (onItemClick) onItemClick(event)
     if (item.onClick) item.onClick(event)
   }

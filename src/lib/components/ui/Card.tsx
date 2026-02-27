@@ -1,6 +1,5 @@
-import { type ThemeColor } from '@/lib/utils'
+import { cn, type ThemeColor } from '@/lib/utils'
 import { type ComponentProps } from 'react'
-import { twMerge } from 'tailwind-merge'
 
 export type CardSize = 'card-xs' | 'card-sm' | 'card-md' | 'card-lg' | 'card-xl'
 export type CardBorderStyle = 'card-border' | 'card-dash'
@@ -16,7 +15,7 @@ export type CardProps = ComponentProps<'div'> & {
 
 function CardBody({ children, className, ...props }: ComponentProps<'article'>) {
   return (
-    <article {...props} className={twMerge('card-body p-0 pb-2 md:p-4 md:pb-4', className)}>
+    <article {...props} className={cn('card-body p-0 pb-2 md:p-4 md:pb-4', className)}>
       {children}
     </article>
   )
@@ -24,7 +23,7 @@ function CardBody({ children, className, ...props }: ComponentProps<'article'>) 
 
 function CardTitle({ children, className, ...props }: ComponentProps<'div'>) {
   return (
-    <div {...props} className={twMerge('card-title pb-2', className)}>
+    <div {...props} className={cn('card-title pb-2', className)}>
       {children}
     </div>
   )
@@ -32,7 +31,7 @@ function CardTitle({ children, className, ...props }: ComponentProps<'div'>) {
 
 function CardActions({ children, className, ...props }: ComponentProps<'footer'>) {
   return (
-    <footer {...props} className={twMerge('card-actions justify-end', className)}>
+    <footer {...props} className={cn('card-actions justify-end', className)}>
       {children}
     </footer>
   )
@@ -50,7 +49,7 @@ export default function Card({
   return (
     <div
       {...props}
-      className={twMerge(
+      className={cn(
         'card card-border space-y-2 divide-y-2 px-4 py-2',
         size,
         borderStyle,

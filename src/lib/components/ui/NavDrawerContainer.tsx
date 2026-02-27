@@ -1,26 +1,20 @@
 'use client'
 
-import {
-  faBars,
-  faBook,
-  faBusinessTime,
-  faCertificate,
-  faCode,
-  faFileText,
-  faHome,
-  faLink,
-  faSquareCaretLeft
-} from '@fortawesome/free-solid-svg-icons'
+import { faBars, faSquareCaretLeft } from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
 
-import { cn, ExternalLinkUrls } from '@/lib/utils'
+import { cn } from '@/lib/utils'
 import Button from './Button'
 import Header from './Header'
 import NavMenu from './NavMenu'
+import { NavMenuItem } from './types/nav-menu-types'
 
-export type NavDrawerContainerProps = React.ComponentProps<'div'>
+export type NavDrawerContainerProps = React.ComponentProps<'div'> & {
+  menuItems: NavMenuItem[]
+}
 
 export default function NavDrawerContainer({
+  menuItems,
   children,
   className,
   ...props
@@ -82,48 +76,7 @@ export default function NavDrawerContainer({
             iconSize="2x"
             onClick={handleDrawerClose}
           />
-          <NavMenu
-            onItemClick={handleDrawerClose}
-            menuItems={[
-              {
-                label: 'Home',
-                path: '/',
-                icon: faHome
-              },
-              {
-                label: 'Skills',
-                path: '/skills',
-                icon: faBook
-              },
-              {
-                label: 'Experience',
-                path: '/experience',
-                icon: faBusinessTime
-              },
-              {
-                label: 'Certifications',
-                path: '/certifications',
-                icon: faCertificate
-              },
-              {
-                label: 'Links',
-                path: '/links',
-                icon: faLink
-              },
-              {
-                label: 'Resume',
-                href: '/resume.pdf',
-                download: true,
-                icon: faFileText
-              },
-              {
-                label: 'Site Source',
-                href: ExternalLinkUrls.Source,
-                target: '_blank',
-                icon: faCode
-              }
-            ]}
-          />
+          <NavMenu onItemClick={handleDrawerClose} menuItems={menuItems} />
         </div>
       </div>
     </div>
