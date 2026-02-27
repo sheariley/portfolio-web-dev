@@ -38,6 +38,7 @@ export default async function SkillsPage() {
               <h4>Patterns</h4>
               <ul>
                 <li>MVVM (Model-View-ViewModel) Architecture</li>
+                <li>MVC / MVX</li>
                 <li>Component-based Architecture</li>
                 <li>Flux</li>
                 <li>SPA (Single Page Application)</li>
