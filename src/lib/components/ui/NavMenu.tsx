@@ -52,7 +52,7 @@ function NavLink({ to, children, className, ...props }: NavLinkProps) {
   return (
     <Link
       href={to}
-      className={cn(isActive ? 'text-primary font-semibold' : 'text-base-content', className)}
+      className={cn(isActive ? 'text-primary-content bg-primary' : 'text-base-content', className)}
       {...props}
     >
       {children}
