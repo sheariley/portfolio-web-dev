@@ -6,6 +6,7 @@ import {
   faFigma,
   faFontAwesome,
   faGitAlt,
+  faGitlab,
   faGulp,
   faHtml5,
   faJs,
@@ -230,7 +231,15 @@ export default async function SkillsPage() {
                 </li>
                 <li>
                   <FontAwesomeIcon icon={faMicrosoft} />
-                  &nbsp;Microsoft .NET Framework &amp; .NET Core
+                  &nbsp;Microsoft .NET Framework
+                </li>
+                <li>
+                  <FontAwesomeIcon icon={faMicrosoft} />
+                  &nbsp;Microsoft .NET Core
+                </li>
+                <li>
+                  <FontAwesomeIcon icon={faGitlab} />
+                  &nbsp;GitLab
                 </li>
               </ul>
 
