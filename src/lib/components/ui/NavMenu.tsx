@@ -1,24 +1,9 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
 
 import { cn } from '@/lib/utils'
-import {
-  isNavMenuLinkItem,
-  NavLinkProps,
-  NavMenuItem,
-  NavMenuItemIconProps,
-  NavMenuProps
-} from './types/nav-menu-types'
-
-function NavMenuItemIcon({ icon }: NavMenuItemIconProps) {
-  return (
-    <span className="min-w-5 text-center">
-      <FontAwesomeIcon icon={icon} />
-    </span>
-  )
-}
+import { isNavMenuLinkItem, NavLinkProps, NavMenuItem, NavMenuProps } from './types/nav-menu-types'
 
 function NavLink({ to, children, className, ...props }: NavLinkProps) {
   const pathname = usePathname()
@@ -53,7 +38,7 @@ export default function NavMenu({ menuItems, onItemClick }: NavMenuProps) {
                 target={item.target}
                 onClick={handleItemClick.bind(null, item)}
               >
-                <NavMenuItemIcon icon={item.icon} />
+                {item.icon}
                 {item.label}
               </a>
             </li>
@@ -63,7 +48,7 @@ export default function NavMenu({ menuItems, onItemClick }: NavMenuProps) {
         return (
           <li key={item.path}>
             <NavLink to={item.path} onClick={handleItemClick.bind(null, item)}>
-              <NavMenuItemIcon icon={item.icon} />
+              {item.icon}
               {item.label}
             </NavLink>
           </li>

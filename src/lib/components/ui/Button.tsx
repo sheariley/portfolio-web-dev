@@ -1,16 +1,12 @@
-import { IconProp, SizeProp } from '@fortawesome/fontawesome-svg-core'
 import Link from 'next/link'
-import {
-  Children,
-  ComponentPropsWithRef,
-  PropsWithChildren,
-  Ref,
-  RefAttributes,
-  forwardRef
+import React, {
+  type ComponentPropsWithRef,
+  type PropsWithChildren,
+  type Ref,
+  type RefAttributes
 } from 'react'
 
 import { cn, type ThemeColor } from '@/lib/utils'
-import Icon from './Icon'
 
 export type ButtonDisplayType = 'default' | 'link' | 'outline'
 
@@ -19,8 +15,7 @@ export type ButtonWidthType = 'default' | 'square' | 'wide' | 'block'
 export type ButtonSize = 'default' | 'xs' | 'sm' | 'lg'
 
 type ButtonIconProps = {
-  icon?: IconProp
-  iconSize?: SizeProp
+  icon?: React.ReactNode | null
   iconAfterText?: boolean
 }
 
@@ -44,7 +39,7 @@ export type LinkButtonProps = ComponentSpecificProps & ButtonIconProps & LinkSpe
 
 export type ButtonComponentProps = RegularButtonProps | LinkButtonProps
 
-const Button = forwardRef<
+const Button = React.forwardRef<
   HTMLAnchorElement | HTMLButtonElement | typeof Link,
   ButtonComponentProps
 >(function renderButton(
@@ -81,14 +76,14 @@ const Button = forwardRef<
 
 export default Button
 
-const RegularButton = forwardRef<HTMLButtonElement, ButtonSpecificProps & ButtonIconProps>(
+const RegularButton = React.forwardRef<HTMLButtonElement, ButtonSpecificProps & ButtonIconProps>(
   function renderRegularButton(
-    { children, icon, iconSize, iconAfterText, ...props }: ButtonSpecificProps & ButtonIconProps,
+    { children, icon, iconAfterText, ...props }: ButtonSpecificProps & ButtonIconProps,
     ref
   ) {
     return (
       <button ref={ref as Ref<HTMLButtonElement>} {...props}>
-        <ButtonChildrenWrapper icon={icon} iconSize={iconSize} iconAfterText={iconAfterText}>
+        <ButtonChildrenWrapper icon={icon} iconAfterText={iconAfterText}>
           {children}
         </ButtonChildrenWrapper>
       </button>
@@ -96,20 +91,21 @@ const RegularButton = forwardRef<HTMLButtonElement, ButtonSpecificProps & Button
   }
 )
 
-const LinkButton = forwardRef<HTMLAnchorElement | typeof Link, LinkSpecificProps & ButtonIconProps>(
-  function renderLinkButton(
-    { children, icon, iconSize, iconAfterText, ...props }: LinkSpecificProps & ButtonIconProps,
-    ref
-  ) {
-    return (
-      <Link ref={ref as RefAttributes<HTMLAnchorElement>['ref']} {...props}>
-        <ButtonChildrenWrapper icon={icon} iconSize={iconSize} iconAfterText={iconAfterText}>
-          {children}
-        </ButtonChildrenWrapper>
-      </Link>
-    )
-  }
-)
+const LinkButton = React.forwardRef<
+  HTMLAnchorElement | typeof Link,
+  LinkSpecificProps & ButtonIconProps
+>(function renderLinkButton(
+  { children, icon, iconAfterText, ...props }: LinkSpecificProps & ButtonIconProps,
+  ref
+) {
+  return (
+    <Link ref={ref as RefAttributes<HTMLAnchorElement>['ref']} {...props}>
+      <ButtonChildrenWrapper icon={icon} iconAfterText={iconAfterText}>
+        {children}
+      </ButtonChildrenWrapper>
+    </Link>
+  )
+})
 
 function ButtonChildrenWrapper({
   iconAfterText,
@@ -119,7 +115,7 @@ function ButtonChildrenWrapper({
   return (
     <>
       {!iconAfterText && <ButtonIconWrapper {...props} />}
-      {!!Children.count(children) && (
+      {!!React.Children.count(children) && (
         <span className="btn-wrapped-content inline-block content-center items-center">
           {children}
         </span>
@@ -129,11 +125,11 @@ function ButtonChildrenWrapper({
   )
 }
 
-function ButtonIconWrapper({ icon, iconSize }: ButtonIconProps) {
+function ButtonIconWrapper({ icon }: ButtonIconProps) {
   return (
     !!icon && (
       <span className="inline-flex min-w-5 items-center justify-center justify-items-center">
-        <Icon icon={icon} size={iconSize} />
+        {icon}
       </span>
     )
   )

@@ -21,10 +21,10 @@ import {
   faWindows
 } from '@fortawesome/free-brands-svg-icons'
 import { faFileExcel, faFilePowerpoint } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import Card from '@/lib/components/ui/Card'
 import PageHeader from '@/lib/components/ui/PageHeader'
+import Icon from '@/lib/components/ui/Icon'
 
 export default async function SkillsPage() {
   return (
@@ -70,23 +70,23 @@ export default async function SkillsPage() {
               <h4>Front-end</h4>
               <ul>
                 <li>
-                  <FontAwesomeIcon icon={faHtml5} />
+                  <Icon icon={faHtml5} />
                   &nbsp;HTML
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faJs} />
+                  <Icon icon={faJs} />
                   &nbsp;JavaScript/TypeScript
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faCss3} />
+                  <Icon icon={faCss3} />
                   &nbsp;CSS
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faSass} />
+                  <Icon icon={faSass} />
                   &nbsp;SASS
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faLess} />
+                  <Icon icon={faLess} />
                   &nbsp;Less
                 </li>
               </ul>
@@ -110,7 +110,7 @@ export default async function SkillsPage() {
               <h4>Modern</h4>
               <ul>
                 <li>
-                  <FontAwesomeIcon icon={faAngular} />
+                  <Icon icon={faAngular} />
                   &nbsp;Angular
                 </li>
                 <li>RxJS</li>
@@ -118,14 +118,14 @@ export default async function SkillsPage() {
                 <li>TailwindCSS</li>
                 <li>KendoUI for Angular</li>
                 <li>
-                  <FontAwesomeIcon icon={faReact} />
+                  <Icon icon={faReact} />
                   &nbsp;React
                 </li>
                 <li>React Native</li>
                 <li>Next.js</li>
                 <li>Redux</li>
                 <li>
-                  <FontAwesomeIcon icon={faVuejs} />
+                  <Icon icon={faVuejs} />
                   &nbsp;Vue
                 </li>
                 <li>Nuxt</li>
@@ -137,7 +137,7 @@ export default async function SkillsPage() {
                 <li>JSONata</li>
                 <li>Gridster</li>
                 <li>
-                  <FontAwesomeIcon icon={faFontAwesome} />
+                  <Icon icon={faFontAwesome} />
                   &nbsp;FontAwesome Icons
                 </li>
               </ul>
@@ -146,7 +146,7 @@ export default async function SkillsPage() {
               <ul>
                 <li>Webpack</li>
                 <li>
-                  <FontAwesomeIcon icon={faGulp} />
+                  <Icon icon={faGulp} />
                   &nbsp;Gulp.js
                 </li>
                 <li>Jest</li>
@@ -158,12 +158,12 @@ export default async function SkillsPage() {
               <h4>Legacy</h4>
               <ul>
                 <li>
-                  <FontAwesomeIcon icon={faAngular} />
+                  <Icon icon={faAngular} />
                   &nbsp;AngularJS
                 </li>
                 <li>KnockoutJS</li>
                 <li>
-                  <FontAwesomeIcon icon={faBootstrap} />
+                  <Icon icon={faBootstrap} />
                   &nbsp;Bootstrap
                 </li>
                 <li>jQuery / jQuery-UI</li>
@@ -217,28 +217,28 @@ export default async function SkillsPage() {
               <h4>Platforms</h4>
               <ul>
                 <li>
-                  <FontAwesomeIcon icon={faMicrosoft} />
+                  <Icon icon={faMicrosoft} />
                   &nbsp;Microsoft Azure DevOps
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faDocker} />
+                  <Icon icon={faDocker} />
                   &nbsp;Docker and Harbor
                 </li>
                 <li>Vercel</li>
                 <li>
-                  <FontAwesomeIcon icon={faNodeJs} />
+                  <Icon icon={faNodeJs} />
                   &nbsp;Node.js and NPM
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faMicrosoft} />
+                  <Icon icon={faMicrosoft} />
                   &nbsp;Microsoft .NET Framework
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faMicrosoft} />
+                  <Icon icon={faMicrosoft} />
                   &nbsp;Microsoft .NET Core
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faGitlab} />
+                  <Icon icon={faGitlab} />
                   &nbsp;GitLab
                 </li>
               </ul>
@@ -246,11 +246,11 @@ export default async function SkillsPage() {
               <h4>Tools</h4>
               <ul>
                 <li>
-                  <FontAwesomeIcon icon={faGitAlt} />
+                  <Icon icon={faGitAlt} />
                   &nbsp;Git &amp; GitHub
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faMicrosoft} />
+                  <Icon icon={faMicrosoft} />
                   &nbsp;Microsoft TFS (Team Foundation Server)
                 </li>
                 <li>Visual Studio</li>
@@ -260,19 +260,19 @@ export default async function SkillsPage() {
                 <li>Adobe Photoshop</li>
                 <li>GIMP</li>
                 <li>
-                  <FontAwesomeIcon icon={faFigma} />
+                  <Icon icon={faFigma} />
                   &nbsp;Figma
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faFileExcel} />
+                  <Icon icon={faFileExcel} />
                   &nbsp;Microsoft Excel
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faFilePowerpoint} />
+                  <Icon icon={faFilePowerpoint} />
                   &nbsp; Microsoft PowerPoint
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faMicrosoft} />
+                  <Icon icon={faMicrosoft} />
                   &nbsp; MS SQL Server Management Studio
                 </li>
                 <li>DB Visualizer</li>
@@ -282,11 +282,11 @@ export default async function SkillsPage() {
                 <li>OpenObserve</li>
                 <li>Prometheus</li>
                 <li>
-                  <FontAwesomeIcon icon={faSlack} />
+                  <Icon icon={faSlack} />
                   &nbsp;Slack
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faMicrosoft} />
+                  <Icon icon={faMicrosoft} />
                   &nbsp;Microsoft Teams
                 </li>
               </ul>
@@ -300,11 +300,11 @@ export default async function SkillsPage() {
             <div className="prose max-w-none">
               <ul>
                 <li>
-                  <FontAwesomeIcon icon={faWindows} />
+                  <Icon icon={faWindows} />
                   &nbsp;Windows &amp; Windows Server
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faLinux} />
+                  <Icon icon={faLinux} />
                   &nbsp;Linux (Debian and Alpine) &amp; WSL
                 </li>
                 <li>Arduino (Arduino IDE &amp; C++ / Wiring)</li>

@@ -1,17 +1,21 @@
 import './globals.css'
 
 import {
+  faBars,
   faBook,
   faBusinessTime,
   faCertificate,
   faCode,
   faFileText,
   faHome,
-  faLink
+  faLink,
+  faSquareCaretLeft
 } from '@fortawesome/free-solid-svg-icons'
 import type { Metadata, Viewport } from 'next'
 
+import Icon from '@/lib/components/ui/Icon'
 import NavDrawerContainer from '@/lib/components/ui/NavDrawerContainer'
+import NavMenuItemIcon from '@/lib/components/ui/NavMenuItemIcon'
 import { ExternalLinkUrls } from '@/lib/utils'
 
 export const metadata: Metadata = {
@@ -32,43 +36,45 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div id="modal-container"></div>
         <div id="root">
           <NavDrawerContainer
+            openMenuIcon={<Icon icon={faBars} size="2x" />}
+            closeMenuIcon={<Icon icon={faSquareCaretLeft} size="2x" />}
             menuItems={[
               {
                 label: 'Home',
                 path: '/',
-                icon: faHome
+                icon: <NavMenuItemIcon icon={faHome} />
               },
               {
                 label: 'Skills',
                 path: '/skills',
-                icon: faBook
+                icon: <NavMenuItemIcon icon={faBook} />
               },
               {
                 label: 'Experience',
                 path: '/experience',
-                icon: faBusinessTime
+                icon: <NavMenuItemIcon icon={faBusinessTime} />
               },
               {
                 label: 'Certifications',
                 path: '/certifications',
-                icon: faCertificate
+                icon: <NavMenuItemIcon icon={faCertificate} />
               },
               {
                 label: 'Links',
                 path: '/links',
-                icon: faLink
+                icon: <NavMenuItemIcon icon={faLink} />
               },
               {
                 label: 'Resume',
                 href: '/resume.pdf',
                 download: true,
-                icon: faFileText
+                icon: <NavMenuItemIcon icon={faFileText} />
               },
               {
                 label: 'Site Source',
                 href: ExternalLinkUrls.Source,
                 target: '_blank',
-                icon: faCode
+                icon: <NavMenuItemIcon icon={faCode} />
               }
             ]}
           >

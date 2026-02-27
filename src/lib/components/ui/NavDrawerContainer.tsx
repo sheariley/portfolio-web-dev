@@ -1,6 +1,5 @@
 'use client'
 
-import { faBars, faSquareCaretLeft } from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
 
 import { cn } from '@/lib/utils'
@@ -10,10 +9,15 @@ import NavMenu from './NavMenu'
 import { NavMenuItem } from './types/nav-menu-types'
 
 export type NavDrawerContainerProps = React.ComponentProps<'div'> & {
+  // TODO: Add default SVC icons for the open/close icon options and make these props optional when promoting
+  openMenuIcon: React.ReactNode
+  closeMenuIcon: React.ReactNode
   menuItems: NavMenuItem[]
 }
 
 export default function NavDrawerContainer({
+  openMenuIcon,
+  closeMenuIcon,
   menuItems,
   children,
   className,
@@ -47,8 +51,7 @@ export default function NavDrawerContainer({
               widthType="square"
               size="sm"
               themeColor="ghost"
-              icon={faBars}
-              iconSize="2x"
+              icon={openMenuIcon}
               onClick={handleDrawerOpen}
             />
           </div>
@@ -72,8 +75,7 @@ export default function NavDrawerContainer({
             widthType="square"
             size="sm"
             themeColor="ghost"
-            icon={faSquareCaretLeft}
-            iconSize="2x"
+            icon={closeMenuIcon}
             onClick={handleDrawerClose}
           />
           <NavMenu onItemClick={handleDrawerClose} menuItems={menuItems} />

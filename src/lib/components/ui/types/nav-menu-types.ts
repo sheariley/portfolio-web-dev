@@ -1,10 +1,9 @@
-import { type IconDefinition } from '@fortawesome/free-brands-svg-icons'
-import { type MouseEvent } from 'react'
+import { type MouseEvent, type ReactNode } from 'react'
 import Link from 'next/link'
 
 export type NavMenuItemBase = {
   label: string
-  icon: IconDefinition
+  icon: ReactNode | null | undefined
   onClick?(event: MouseEvent<HTMLAnchorElement>): void
 }
 
@@ -27,10 +26,6 @@ export type NavMenuProps = {
 
 export type NavLinkProps = Omit<React.ComponentProps<typeof Link>, 'href'> & {
   to: string
-}
-
-export type NavMenuItemIconProps = {
-  icon: IconDefinition
 }
 
 export function isNavMenuLinkItem(item: NavMenuItem): item is NavMenuLinkItem {

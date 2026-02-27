@@ -8,6 +8,7 @@ import {
 
 import Button from '@/lib/components/ui/Button'
 import Card from '@/lib/components/ui/Card'
+import Icon from '@/lib/components/ui/Icon'
 import { ExternalLinkUrls } from '@/lib/utils'
 
 export default async function HomePage() {
@@ -55,7 +56,7 @@ export default async function HomePage() {
               <Button
                 themeColor="primary"
                 href="/skills"
-                icon={faBook}
+                icon={<Icon icon={faBook} />}
                 size="sm"
                 className="w-full justify-start whitespace-nowrap"
               >
@@ -66,7 +67,7 @@ export default async function HomePage() {
               <Button
                 themeColor="primary"
                 href="/experience"
-                icon={faBusinessTime}
+                icon={<Icon icon={faBusinessTime} />}
                 size="sm"
                 className="w-full justify-start whitespace-nowrap"
               >
@@ -77,7 +78,7 @@ export default async function HomePage() {
               <Button
                 themeColor="primary"
                 href="/links"
-                icon={faExternalLink}
+                icon={<Icon icon={faExternalLink} />}
                 size="sm"
                 className="w-full justify-start whitespace-nowrap"
               >
@@ -90,7 +91,7 @@ export default async function HomePage() {
                 href={ExternalLinkUrls.GitHub}
                 target="_blank"
                 rel="noopener noreferrer"
-                icon={faGithub}
+                icon={<Icon icon={faGithub} />}
                 size="sm"
                 className="w-full justify-start whitespace-nowrap"
               >
@@ -103,7 +104,7 @@ export default async function HomePage() {
                 href={ExternalLinkUrls.LinkedIn}
                 target="_blank"
                 rel="noopener noreferrer"
-                icon={faLinkedin}
+                icon={<Icon icon={faLinkedin} />}
                 size="sm"
                 className="w-full justify-start whitespace-nowrap"
               >
@@ -116,7 +117,7 @@ export default async function HomePage() {
             <Button
               themeColor="secondary"
               href="mailto:sheariley@live.com"
-              icon={faEnvelope}
+              icon={<Icon icon={faEnvelope} />}
               className="w-48"
             >
               sheariley@live.com
@@ -210,7 +211,12 @@ export default async function HomePage() {
 
           <p className="max-lg:my-1">
             The rest is history and you can read more about it in{' '}
-            <Button href="/experience" themeColor="primary" icon={faBusinessTime} size="sm">
+            <Button
+              href="/experience"
+              themeColor="primary"
+              icon={<Icon icon={faBusinessTime} />}
+              size="sm"
+            >
               Experience
             </Button>
           </p>

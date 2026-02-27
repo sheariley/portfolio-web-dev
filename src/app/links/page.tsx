@@ -3,6 +3,7 @@ import { faCode, faExternalLink, faFileText } from '@fortawesome/free-solid-svg-
 
 import Button from '@/lib/components/ui/Button'
 import Card from '@/lib/components/ui/Card'
+import Icon from '@/lib/components/ui/Icon'
 import { ExternalLinkUrls } from '@/lib/utils'
 
 export default async function LinksPage() {
@@ -34,7 +35,7 @@ export default async function LinksPage() {
                         href={ExternalLinkUrls.FarmHub}
                         target="_blank"
                         rel="noopener noreferrer"
-                        icon={faExternalLink}
+                        icon={<Icon icon={faExternalLink} />}
                         size="sm"
                         className="justify-start"
                       >
@@ -67,7 +68,7 @@ export default async function LinksPage() {
                   themeColor="primary"
                   href="/resume.pdf"
                   download
-                  icon={faFileText}
+                  icon={<Icon icon={faFileText} />}
                   size="sm"
                   className="w-full justify-start whitespace-nowrap"
                 >
@@ -80,7 +81,7 @@ export default async function LinksPage() {
                   href={ExternalLinkUrls.LinkedIn}
                   target="_blank"
                   rel="noopener noreferrer"
-                  icon={faLinkedin}
+                  icon={<Icon icon={faLinkedin} />}
                   size="sm"
                   className="w-full justify-start whitespace-nowrap"
                 >
@@ -93,7 +94,7 @@ export default async function LinksPage() {
                   href={ExternalLinkUrls.GitHub}
                   target="_blank"
                   rel="noopener noreferrer"
-                  icon={faGithub}
+                  icon={<Icon icon={faGithub} />}
                   size="sm"
                   className="w-full justify-start whitespace-nowrap"
                 >
@@ -106,7 +107,7 @@ export default async function LinksPage() {
                   href={ExternalLinkUrls.Source}
                   target="_blank"
                   rel="noopener noreferrer"
-                  icon={faCode}
+                  icon={<Icon icon={faCode} />}
                   size="sm"
                   className="w-full justify-start whitespace-nowrap"
                 >
