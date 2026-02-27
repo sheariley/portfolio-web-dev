@@ -47,6 +47,7 @@ export default async function SkillsPage() {
                 <li>Cloud &amp; Distributed</li>
                 <li>CI/CD</li>
                 <li>Microservices</li>
+                <li>Composition</li>
               </ul>
 
               <h4>Processes</h4>
