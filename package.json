@@ -15,7 +15,9 @@
     "build": "next build",
     "serve": "npx serve@latest ./build",
     "lint": "eslint src --max-warnings=0",
-    "typecheck": "tsc --project tsconfig.json --noEmit"
+    "typecheck": "tsc --project tsconfig.json --noEmit",
+    "clean:pwsh": "pwsh -CommandWithArgs \"Remove-Item -Recurse .\\.next\"",
+    "clean:sh": "rm -rf .\\.next"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.1.0",
