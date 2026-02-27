@@ -3,6 +3,7 @@ import {
   faBootstrap,
   faCss3,
   faDocker,
+  faFigma,
   faFontAwesome,
   faGitAlt,
   faGulp,
@@ -10,6 +11,7 @@ import {
   faJs,
   faLess,
   faLinux,
+  faMicrosoft,
   faNodeJs,
   faReact,
   faSass,
@@ -17,6 +19,7 @@ import {
   faVuejs,
   faWindows
 } from '@fortawesome/free-brands-svg-icons'
+import { faFileExcel, faFilePowerpoint } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import Card from '@/lib/components/ui/Card'
@@ -29,20 +32,29 @@ export default async function SkillsPage() {
       <br />
       <section className="gap-8 space-y-12 max-lg:flex max-lg:w-full max-lg:flex-col max-lg:items-stretch lg:block lg:columns-2">
         <Card>
-          <Card.Title>Patterns &amp; Practices</Card.Title>
+          <Card.Title>Patterns &amp; Processes</Card.Title>
           <Card.Body>
             <div className="prose max-w-none">
+              <h4>Patterns</h4>
               <ul>
-                <li>MVVM</li>
+                <li>MVVM (Model-View-ViewModel) Architecture</li>
                 <li>Component-based Architecture</li>
                 <li>Flux</li>
-                <li>SPA</li>
+                <li>SPA (Single Page Application)</li>
                 <li>Isomorphic</li>
                 <li>RESTful Web APIs</li>
                 <li>N-Tier</li>
-                <li>Cloud & Distributed</li>
+                <li>Cloud &amp; Distributed</li>
                 <li>CI/CD</li>
                 <li>Microservices</li>
+              </ul>
+
+              <h4>Processes</h4>
+              <ul>
+                <li>Agile</li>
+                <li>SCRUM</li>
+                <li>Kanban</li>
+                <li>Waterfall</li>
               </ul>
             </div>
           </Card.Body>
@@ -52,7 +64,7 @@ export default async function SkillsPage() {
           <Card.Title>Programming Languages</Card.Title>
           <Card.Body>
             <div className="prose max-w-none">
-              <h2>Front-end</h2>
+              <h4>Front-end</h4>
               <ul>
                 <li>
                   <FontAwesomeIcon icon={faHtml5} />
@@ -76,7 +88,7 @@ export default async function SkillsPage() {
                 </li>
               </ul>
 
-              <h2>Back-end</h2>
+              <h4>Back-end</h4>
               <ul>
                 <li>C#</li>
                 <li>SQL</li>
@@ -92,7 +104,7 @@ export default async function SkillsPage() {
           <Card.Title>Front-end Frameworks and Tools</Card.Title>
           <Card.Body>
             <div className="prose max-w-none">
-              <h2>Modern</h2>
+              <h4>Modern</h4>
               <ul>
                 <li>
                   <FontAwesomeIcon icon={faAngular} />
@@ -127,7 +139,7 @@ export default async function SkillsPage() {
                 </li>
               </ul>
 
-              <h2>Testing and Build Tools</h2>
+              <h4>Testing and Build Tools</h4>
               <ul>
                 <li>Webpack</li>
                 <li>
@@ -140,7 +152,7 @@ export default async function SkillsPage() {
                 <li>Playwright</li>
               </ul>
 
-              <h2>Legacy</h2>
+              <h4>Legacy</h4>
               <ul>
                 <li>
                   <FontAwesomeIcon icon={faAngular} />
@@ -199,41 +211,73 @@ export default async function SkillsPage() {
           <Card.Title>Platforms and Tools</Card.Title>
           <Card.Body>
             <div className="prose max-w-none">
+              <h4>Platforms</h4>
               <ul>
                 <li>
-                  <FontAwesomeIcon icon={faNodeJs} />
-                  &nbsp;Node.js and NPM
+                  <FontAwesomeIcon icon={faMicrosoft} />
+                  &nbsp;Microsoft Azure DevOps
                 </li>
-                <li>Azure DevOps and Azure Pipelines</li>
                 <li>
                   <FontAwesomeIcon icon={faDocker} />
                   &nbsp;Docker and Harbor
                 </li>
+                <li>Vercel</li>
+                <li>
+                  <FontAwesomeIcon icon={faNodeJs} />
+                  &nbsp;Node.js and NPM
+                </li>
+                <li>
+                  <FontAwesomeIcon icon={faMicrosoft} />
+                  &nbsp;Microsoft .NET Framework &amp; .NET Core
+                </li>
+              </ul>
+
+              <h4>Tools</h4>
+              <ul>
                 <li>
                   <FontAwesomeIcon icon={faGitAlt} />
                   &nbsp;Git &amp; GitHub
                 </li>
-                <li>TFS</li>
+                <li>
+                  <FontAwesomeIcon icon={faMicrosoft} />
+                  &nbsp;Microsoft TFS (Team Foundation Server)
+                </li>
                 <li>Visual Studio</li>
                 <li>VS Code</li>
                 <li>JetBrains Rider</li>
                 <li>JetBrains Webstorm</li>
                 <li>Adobe Photoshop</li>
                 <li>GIMP</li>
-                <li>Figma</li>
+                <li>
+                  <FontAwesomeIcon icon={faFigma} />
+                  &nbsp;Figma
+                </li>
+                <li>
+                  <FontAwesomeIcon icon={faFileExcel} />
+                  &nbsp;Microsoft Excel
+                </li>
+                <li>
+                  <FontAwesomeIcon icon={faFilePowerpoint} />
+                  &nbsp; Microsoft PowerPoint
+                </li>
+                <li>
+                  <FontAwesomeIcon icon={faMicrosoft} />
+                  &nbsp; MS SQL Server Management Studio
+                </li>
+                <li>DB Visualizer</li>
+                <li>OpenTelemetry</li>
+                <li>OpenSearch</li>
+                <li>Jaeger</li>
+                <li>OpenObserve</li>
+                <li>Prometheus</li>
                 <li>
                   <FontAwesomeIcon icon={faSlack} />
                   &nbsp;Slack
                 </li>
-                <li>Microsoft Teams</li>
-                <li>Microsoft Excel</li>
-                <li>Microsoft PowerPoint</li>
-                <li>Microsoft SQL Server Management Studio</li>
-                <li>DB Visualizer</li>
-                <li>Vercel</li>
-                <li>OpenTelemetry</li>
-                <li>OpenSearch</li>
-                <li>Jaeger</li>
+                <li>
+                  <FontAwesomeIcon icon={faMicrosoft} />
+                  &nbsp;Microsoft Teams
+                </li>
               </ul>
             </div>
           </Card.Body>
