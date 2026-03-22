@@ -6,6 +6,7 @@ import {
   faBusinessTime,
   faCertificate,
   faCode,
+  faDiagramProject,
   faFileText,
   faHome,
   faLink,
@@ -53,6 +54,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 label: 'Experience',
                 path: '/experience',
                 icon: <NavMenuItemIcon icon={faBusinessTime} />
+              },
+              {
+                label: 'Projects',
+                path: '/projects',
+                icon: <NavMenuItemIcon icon={faDiagramProject} />
               },
               {
                 label: 'Certifications',

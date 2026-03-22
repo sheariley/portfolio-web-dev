@@ -1,5 +1,5 @@
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faCode, faExternalLink, faFileText } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight, faCode, faExternalLink, faFileText } from '@fortawesome/free-solid-svg-icons'
 
 import Button from '@/lib/components/ui/Button'
 import Card from '@/lib/components/ui/Card'
@@ -11,12 +11,13 @@ export default async function LinksPage() {
     <>
       <section className="flex flex-col items-stretch gap-8 space-y-12">
         <Card>
-          <Card.Title className="mb-0 flex justify-start">Publicly Accessible Websites</Card.Title>
+          <Card.Title className="mb-0 flex justify-start">Projects</Card.Title>
           <Card.Body>
             <div className="flex flex-col items-start">
-              <ul className="my-0 list-none space-y-6 pl-0 *:flex *:min-w-45 *:flex-col *:items-start *:pl-0">
+              <ul className="not-prose my-0 list-none space-y-12 divide-y-2 divide-neutral-300/40 pl-0 *:flex *:min-w-45 *:flex-col *:items-center *:pb-8 *:pl-0 *:sm:items-start">
                 <li>
-                  <figure className="not-prose my-0 flex flex-col items-start space-y-6">
+                  <div className="mb-4 text-lg">FarmHub - Farmers Marked Directory</div>
+                  <figure className="not-prose my-0 flex flex-col items-center space-y-6 sm:items-start">
                     <div className="flex flex-col items-stretch space-y-4">
                       <a
                         className="mb-4"
@@ -37,9 +38,9 @@ export default async function LinksPage() {
                         rel="noopener noreferrer"
                         icon={<Icon icon={faExternalLink} />}
                         size="sm"
-                        className="justify-start"
+                        className="justify-center"
                       >
-                        FarmHub - Farmers Market Directory
+                        See it Live!
                       </Button>
                     </div>
                     <figcaption className="text-base-content self-start text-base">
@@ -51,6 +52,36 @@ export default async function LinksPage() {
                       open source LLMs via a locally running instance of Ollama. Logging was an
                       important aspect of the data filtering process, as the AI system prompts had
                       to be tuned to reduce false positives/negatives.
+                    </figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <div className="mb-4 text-lg">InstruFax - Instrument History Tracker</div>
+                  <figure className="not-prose my-0 flex flex-col items-center space-y-6 sm:items-start">
+                    <div className="flex flex-col items-stretch space-y-4">
+                      <a className="mb-4" href="/projects/instrufax">
+                        <img
+                          className="not-prose my-0 aspect-auto max-h-40 drop-shadow-md drop-shadow-black"
+                          src="/website-screenshots/instrufax/screen-mockups-mobile-screens-closeup-1.png"
+                          alt="InstruFax mobile screen designs"
+                        />
+                      </a>
+                      <Button
+                        themeColor="primary"
+                        href="/projects/instrufax"
+                        icon={<Icon icon={faArrowRight} />}
+                        size="sm"
+                        className="justify-center"
+                      >
+                        InstruFax - Instrument History Tracker
+                      </Button>
+                    </div>
+                    <figcaption className="text-base-content self-start text-base">
+                      A community-driven web application for tracking musical instruments by serial
+                      number — including ownership history, repair records, and music store
+                      profiles. Designed mobile-first with a comprehensive Figma design system,
+                      interactive prototype, and 20+ reusable components. Built with Next.js, React,
+                      TypeScript, Supabase, TailwindCSS, daisyUI, and Auth0.
                     </figcaption>
                   </figure>
                 </li>

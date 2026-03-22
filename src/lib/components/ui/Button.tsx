@@ -59,7 +59,7 @@ const Button = React.forwardRef<
     return (
       <LinkButton
         ref={ref as Ref<HTMLAnchorElement | typeof Link>}
-        className={classes}
+        className={cn('no-underline', classes)}
         {...props}
       />
     )
@@ -148,7 +148,7 @@ function getClassNameFromProps({
   className
 }: ComponentSpecificProps) {
   return cn(
-    'btn inline-flex flex-row items-center content-center justify-items-center leading-tight',
+    'btn inline-flex flex-row items-center content-center justify-items-center leading-none',
     size && size !== 'default' && ButtonSizeClasses[size],
     active && 'btn-active',
     displayType && displayType !== 'default' && ButtonDisplayTypeClasses[displayType],
